@@ -1,28 +1,4 @@
-// function createGallery(elem, amount) {
-//     const images = [];
-//     let count = 1;
-  
-//     while (count <= amount) {
-//       images.push(createImg(count));
-//       count++;
-//     }
-  
-//     images.sort(() => 0.5 - Math.random());
-  
-//     elem.append(...images);
-//   }
 
-//   function createImg(number) {
-//     const picture = document.createElement("picture");
-//     const img = document.createElement("img");
-    
-//     img.src = `./assets/img/galery/galery${number}.webp`;
-//     img.classList.add("picture-container__picture");
-//     img.alt = `galery${number}`;
-//     img.loading = "lazy";
-//     picture.append(img);
-//     return img;
-//   }
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGFkb3VrZW43ODA5IiwiYSI6ImNrdTFpOWVvNTI4NW8ybnA4cWdvbWR5cWkifQ.CMpP6WjNcKAXGQAGjt5SzQ';
 
