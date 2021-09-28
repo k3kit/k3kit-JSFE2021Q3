@@ -326,7 +326,7 @@ color: #FFFFFF;
 .slides__amout{
   width: 76px;
 }
-}
+
 
 .amout__item{
   font-family: Roboto, sans-serif;
@@ -345,17 +345,7 @@ color: #FFFFFF;
   width: 100%;
   padding: 0px;
 }
-.amout__item_span{
 
-}
-
-.slider__current{
-    width: 180px;
-}
-
-.slider__items{
-  
-}
 
 .slider__item{
   background-color: white;
