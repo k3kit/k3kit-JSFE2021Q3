@@ -1,5 +1,4 @@
 
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGFkb3VrZW43ODA5IiwiYSI6ImNrdTFpOWVvNTI4NW8ybnA4cWdvbWR5cWkifQ.CMpP6WjNcKAXGQAGjt5SzQ';
 
 const map = new mapboxgl.Map({
@@ -59,3 +58,18 @@ body.addEventListener('mousemove',(e)=>{
 
 
 
+const progress = document.querySelector('.input__control-progress');
+
+progress.addEventListener('input', function () {
+    const value = this.value;
+    this.style.background =
+        `linear-gradient(to right, #ff0000 0%, #ff0000 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`
+})
+
+const vollvl = document.querySelector('.input__control-vol');
+
+vollvl.addEventListener('input', function () {
+    const value = this.value;
+    this.style.background =
+        `linear-gradient(to right, #ff0000 0%, #ff0000 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`
+})

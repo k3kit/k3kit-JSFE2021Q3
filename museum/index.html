@@ -20,7 +20,6 @@
                         </a>
                         <h1 class="header__logo-title">LOUVRE</h1>
                         </div>
-
                         <nav class="header__nav">
                             <ul class="header__list">
                           <li class="header__item">
@@ -62,12 +61,10 @@
         <section class="welcome" id="welcome"> 
               <div class="wrapper">
                 <div class="welcome__wrapper">
-                  <div class="welcome__content">
-                    <h2 class="welcome__title">Welcome <br>
-                      to the Louvre</h2>
-                      <p class="welcome__subtitle">
-                          From the castle too the museum
-                      </p>
+                  <div class="welcome__wrapper-content">
+                    <div class="welcome__content">
+                      <h2 class="welcome__title">Welcome<br>to the Louvre</h2>
+                      <p class="welcome__subtitle">From the castle too the museum</p>
                       <div class="form__wrap">
                           <form action="./tours/tour7.html" target="_blank">
                           <button class="discover-form_btn">
@@ -78,6 +75,8 @@
                       </form>
                     </div>
                   </div>
+                </div>
+                    
 
                   <div class="welcome__slider">
                     <div class="welcome__slider_control">
@@ -179,14 +178,24 @@
               <h2 class="video__title section-title">Video journey</h2>
               <p class="video__text section-text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
               </div>
-              <div class="video__player">
-                <iframe width="1440" height="650"  loading = "lazy" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="player">
+                <div class="btn__play"></div>
+                <video class="video__watch" src="./assets/video/video0.mp4" poster="./assets/video/poster0.jpg"></video>
+                
+                <div class="player__control">
+                  <button type="button" class="btn__control-play"></button>
+                  <input type="range" value="40" min="0" max="100" step="1" class="input__control-progress">
+                  <button type="button" class="btn__control-vol"></button>
+                  <input type="range" value="25" min="0" max="100" step="1" class="input__control-vol">
+                  <button type="button" class="player__control-fullsc"></button>
+                </div>
               </div>
-                <div class="video__player-slider">
+            </div>
+              <div class="video__player-slider">
                     <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI"  loading = "lazy" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <iframe  width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading = "lazy" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY"  loading = "lazy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+              </div>
                 <div class="video__btn_slider">
                  <ul class="video__menu">
                    <li class="video__btn">
@@ -197,19 +206,18 @@
                     <li class="video__item"></li>
                     <li class="video__item"></li>
                     <li class="video__item"></li>
-                   <li class="video__btn">
-                    <button class="video__btn-right"></button>
-                   </li>
+                   <li class="video__btn"><button class="video__btn-right"></button></li>
+                 </ul>
                 </div>
             </div>
-          </div>
+          
         </section>
         <section class="gallery" id="gallery">
           <div class="wrapper">
             <div class="gallery__wrapper">
               <h2 class="gallery__title section-title">Art Gallery</h2>
-              <div class="picture-container">
-                <div class="picture-inner-container">
+              <div class="picture__container">
+                <div class="picture__inner-container">
                       <div class="picture-box"> <picture>  <img class="item-img" src="./assets/img/galery/galery1.jpg" alt=""></picture></div>
                       <div class="picture-box"> <picture>  <img class="item-img" src="./assets/img/galery/galery2.jpg" alt=""></picture></div>
                       <div class="picture-box"> <picture>  <img class="item-img" src="./assets/img/galery/galery3.jpg" alt=""></picture></div>
@@ -260,7 +268,7 @@
                                   <p class="tickets__amount-suptitle">Basic 18+</p>
                                   <div class="tickets__amount-btn-wrapper">
                                       <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-                                      <input type="number" min="0" max="100" value="1" readonly class="tickets__amount-number">
+                                      <input type="number" min="0" max="20" value="1" readonly class="tickets__amount-number">
                                       <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                   </div>
                               </div>
@@ -268,7 +276,7 @@
                                   <p class="tickets__amount-suptitle">Senior 65+</p>
                                   <div class="tickets__amount-btn-wrapper">
                                      <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-                                     <input type="number" min="0" max="100" value="1" readonly class="tickets__amount-number">
+                                     <input type="number" min="0" max="20" value="1" readonly class="tickets__amount-number">
                                      <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                  </div>
                               </div>
@@ -311,24 +319,24 @@
                       <a class="header__logo-link" href="/" >
                       <img class="header__logo-pic" src="./assets/svg/Vector.svg" alt="logo moseum" >
                   </a>
-                  <h1 class="header__logo-title">LOUVRE</h1>
+                  <h2 class="header__logo-title">LOUVRE</h2>
                   </div>
                   <nav class="footer__nav">
                       <ul class="footer__nav-list">
                           <li class="footer__nav-item">
-                              <a class="footer__link" href="#welcome">Welcome</a>
-                          </li>
-                          <li class="footer__nav-item">
-                              <a class="footer__link" href="#video">Video</a>
-                          </li>
-                          <li class="footer__nav-item">
                               <a class="footer__link" href="#visiting">Visiting</a>
+                          </li>
+                          <li class="footer__nav-item">
+                              <a class="footer__link" href="#gallery">Gallery</a>
+                          </li>
+                          <li class="footer__nav-item">
+                              <a class="footer__link" href="#explore">Explore</a>
                           </li>
                           <li class="footer__nav-item">
                               <a class="footer__link" href="#tickets">Tickets</a>
                           </li>
                           <li class="footer__nav-item">
-                              <a class="footer__link" href="#explore">Explore</a>
+                              <a class="footer__link" href="#video">Video</a>
                           </li>
                           <li class="footer__nav-item">
                               <a class="footer__link" href="#contacts">Contacts</a>
@@ -375,6 +383,7 @@
                   </ul>
               </div>
           </div>
+        
           <div class="copyright">
             <div class="container container_copyright">
               <span class="copyright__item">© 2021</span>
@@ -383,7 +392,6 @@
             </div>
           </div>
       </footer>
-    
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <script src="./js.js"></script>
 </body>
