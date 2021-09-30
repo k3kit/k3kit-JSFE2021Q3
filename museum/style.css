@@ -488,7 +488,7 @@ color: #000000;
 padding-bottom: 10px;
 }
 .visiting__item:hover .visiting__item-title::after {
-  width: 80%;
+  width: 100%;
 }
 .visiting__item-subtext{
 font-family: Roboto;
@@ -762,7 +762,7 @@ height: 220px;
   cursor: pointer;
 }
 
-.input__control-progress {
+.input__control-progress{
   width: 67%;
   background: linear-gradient(to right, #ff0000 0%, #ff0000 47%, #c4c4c4 47%, #c4c4c4 100%);
   border-radius: 0;
@@ -788,7 +788,7 @@ height: 220px;
   background: linear-gradient(to right, #ff0000 0%, #ff0000 32%, #c4c4c4 32%, #c4c4c4 100%);
   border-radius: 0;
   height: 8px;
-  transition: background 450ms ease-in;
+  transition:  450ms ease-in;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -800,7 +800,7 @@ height: 220px;
   height: 15px;
   border-radius: 50%;
   cursor: ew-resize;
-  background: #ffffff;
+  background: #a3a3a3;
   transition: 0.3s;
   appearance: none;
   -moz-appearance: none;
@@ -1264,4 +1264,202 @@ height: 220px;
   letter-spacing: 2px;
   color: #ffffff;
   text-decoration: none;
+}
+
+    /* -------------------------tickets__form---------------------------- */
+
+
+
+.tickets__form {
+  position: fixed;
+  width: 1140px;
+  height: 845px;
+  background-color: rgba(255, 255, 255, 0.693);
+  top:0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tickets__form:target{
+  opacity: 1;
+  visibility: visible;
+}
+.close__btn {
+  width: 25px;
+  height: 25px;
+  background:url(./assets/svg/form/Close.svg);
+  position: absolute;
+  top: 28px;
+  right: 31px;
+}
+.form__wrapper {
+  width: 970px;
+  height: 633px;
+  display: flex;
+  justify-content: space-between;
+}
+.left_block {
+}
+.left__block_title {
+}
+.form__logo {
+}
+.tickets__title-wrapper {
+}
+.tickets__title {
+}
+.tickets__subtitle {
+}
+.left__block_form {
+}
+.left__block__date {
+}
+.tickets__date {
+}
+.tickets__time {
+}
+.left__block_contact {
+}
+.tickets__name {
+}
+.tickets__mail {
+}
+.tickets__tel {
+}
+.tickets__select {
+}
+.tickets__entry {
+}
+.tikets__container-entry {
+}
+.entry__title {
+}
+.wrapper__entry {
+}
+.basic {
+}
+.basic__text {
+}
+.basic__text__content {
+}
+.basic__span {
+}
+.tickets__choice__selector {
+}
+.basic__selector {
+}
+.tickets__choice__button {
+}
+.basic__button {
+}
+.tickets__choice__amount {
+}
+.basic__amount {
+}
+.right__block {
+}
+.right__block_container {
+}
+.right__wrapper-title {
+}
+.right__tickets-title {
+}
+.right__title {
+}
+.right__subtitle {
+}
+.title__list {
+}
+.title__items {
+}
+.title__list_data {
+}
+.title__list_text {
+}
+.title__list_time {
+}
+.title__list_type {
+}
+.right__block_img {
+}
+.right__block_total {
+}
+.right__block_result {
+}
+.right__block-basic {
+}
+.summary__text {
+}
+.basic__summary {
+}
+.basic__summary_text {
+}
+.basic__text_result {
+}
+.basic__result {
+}
+.right__total_value {
+}
+.right__total-text {
+}
+.total__text_content {
+}
+.right__total__summary {
+}
+.total__summary_content {
+}
+.right__block_card {
+}
+.front__card {
+}
+.front__card_container {
+}
+.visa_block {
+}
+.visa__left_content {
+}
+.card__nimber {
+}
+.card__number_text {
+}
+.card__number_input {
+}
+.card_date {
+}
+.card__date_text {
+}
+.card__date_container {
+}
+.card__date_day {
+}
+.card__date_year {
+}
+.visa__right__content {
+}
+.visa {
+}
+.number__card {
+}
+.card__name {
+}
+.card__name_text {
+}
+.card__name_input {
+}
+.back__card {
+}
+.back__card_container {
+}
+.cvc__container {
+}
+.cvc__text {
+}
+.cvc__input {
+}
+.after_input_content {
+}
+.btn_container {
+}
+.book_btn {
 }
