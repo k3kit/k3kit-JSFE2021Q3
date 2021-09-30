@@ -184,7 +184,7 @@
                 
                 <div class="player__control">
                   <button type="button" class="btn__control-play"></button>
-                  <input type="range" value="40" min="0" max="100" step="1" class="input__control-progress">
+                  <input type="range" value="47" min="0" max="100" step="0.5" class="input__control-progress">
                   <button type="button" class="btn__control-vol"></button>
                   <input type="range" value="25" min="0" max="100" step="1" class="input__control-vol">
                   <button type="button" class="player__control-fullsc"></button>
@@ -283,13 +283,175 @@
                           </div>
                           <div class="tickets__total">
                               <h4 class="tickets__type-title tickets__type-title--last">Total €<span>220</span></h4>
-                              <button class="tickets__buy-link">Buy Now</button>
+                              <a href="#form_itic" class="tickets__buy-link"> Buy Now</a>
                           </div>
                       </div>
                   </div>
-                 
               </div>
           </div>
+          <form class="tickets__form" id="form_itic">
+            <a href="#tickets" class="close__btn"></a>
+            <div class="form__wrapper">
+              <div class="left_block">
+                <div class="left__block_title">
+                  <div class="form__logo"></div>
+                  <div class="tickets__title-wrapper">
+                    <h5 class="tickets__title">Booking Tickets</h5> 
+                    <p class="tickets__subtitle">Tour to Louvre</p>
+                  </div>
+                </div>
+                <div class="left__block_form">
+                  <div class="left__block__date">
+                    <input class="tickets__date" type="date">
+                    <input class="tickets__time" type="time">
+                  </div>
+                <div class="left__block_contact">
+                  <input type="text" class="tickets__name">
+                  <input type="email" class="tickets__mail">
+                  <input type="tel" class="tickets__tel">
+                  <select class="tickets__select" name="type">
+                    <option value="Ticket Type">Ticket Type</option>
+                  </select>
+                  <div class="tickets__entry">
+                    <div class="tikets__container-entry">
+                      <h5 class="entry__title">Entry Ticket</h5>
+                      <div class="wrapper__entry">
+                        <div class="basic">
+                          <div class="basic__text">
+                              <p class="basic__text__content">Basic 18+ <span class = "basic__span">(20 </span>€)</p>
+                          </div>
+                          <div class="tickets__choice__selector basic__selector">
+                              <button class="tickets__choice__button basic__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                              <input class="tickets__choice__amount basic__amount" type="number" min="0" max="20" value="2" readonly>
+                              <button class="tickets__choice__button basic__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                          </div>
+                      </div>
+                      <div class="basic">
+                          <div class="basic__text">
+                              <p class="basic__text__content">Senior 65+ <span class = "basic__span">(10 </span>€)</p>
+                          </div>
+                          <div class="tickets__choice__selector basic__selector">
+                              <button class="tickets__choice__button basic__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                              <input class="tickets__choice__amount basic__amount" type="number" min="0" max="20" value="2" readonly>
+                              <button class="tickets__choice__button basic__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right__block">
+            <div class="right__block_container">
+              <div class="right__wrapper-title">
+                <div class="right__tickets-title">
+                  <h6 class="right__title">
+                    Overview
+                  </h6>
+                  <p class="right__subtitle">Tour to Louvre</p>
+                  <ul class="title__list">
+                    <li class="title__items">
+                      <div class="title__list_data"></div>
+                    <p class="title__list_text">Friday, August 19</p>
+                    </li>
+                    <li class="title__items">
+                      <div class="title__list_time"></div>
+                    <p class="title__list_text">16:30</p>
+                    </li>
+                    <li class="title__items">
+                      <div class="title__list_type"></div>
+                    <p class="title__list_text">Temporary exhibition</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="right__block_img"></div>
+              </div>
+              <div class="right__block_total">
+                <div class="right__block_result">
+                  <div class="right__block-basic">
+                    <div class="summary__text">
+                      <div class="basic__summary">
+                        <p class="basic__summary_text">2</p>  
+                      </div>
+                      <div class="basic__text">
+                        <p class="basic__text_result">
+                          Basic (20 €)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="basic__result">40 €</div>
+                  </div>
+                  <div class="right__block-basic">
+                    <div class="summary__text">
+                      <div class="basic__summary">
+                        <p class="basic__summary_text">2</p>  
+                      </div>
+                      <div class="basic__text">
+                        <p class="basic__text_result">
+                          Senior (10 €)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="basic__result">20 €</div>
+                  </div>
+                </div>
+                <div class="right__total_value">
+                  <div class="right__total-text">
+                    <p class="total__text_content">Total:</p>
+                  </div>
+                  <div class="right__total__summary">
+                    <p class="total__summary_content">60 €</p>
+                  </div>
+                </div>
+                <div class="right__block_card">
+                  <div class="front__card">
+                    <div class="front__card_container">
+                      <div class="visa_block">
+                        <div class="visa__left_content">
+                          <div class="card__nimber">
+                            <p class="card__number_text">card__number</p>
+                            <input type="text" class="card__number_input"> 
+                          </div>
+                          <div class="card_date">
+                            <p class="card__date_text">Expiration date</p>
+                            <div class="card__date_container">
+                              <input type="number" class="card__date_day" value='03' min="0" max="31">
+                              <input type="number" class="card__date_year" value="2024"> 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="visa__right__content">
+                          <div class="visa"></div>  
+                          <div class="number__card"></div>
+                        </div>
+                      </div>
+                      <div class="card__name">
+                        <p class="card__name_text">Cardholder name</p>
+                        <input type="text" class="card__name_input">   
+                      </div>
+                    </div>
+                  </div>
+                  <div class="back__card">
+                    <div class="back__card_container">
+                      <div class="cvc__container">
+                        <p class="cvc__text"> CVC/CVV</p>
+                        <input type="text" class="cvc__input">
+                        <div class="after_input_content"> <p>The last <br> 3 or 4 digits on back <br> of the card</p>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_container">
+                <button class="book_btn">Book</button>
+              </div>
+            </div>
+
+          </div>
+            </div>
+          </form>
       </section>
       <div class="parallax">      
       </div>
