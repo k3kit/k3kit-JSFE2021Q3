@@ -292,56 +292,58 @@
           <form class="tickets__form" id="form_itic">
             <a href="#tickets" class="close__btn"></a>
             <div class="form__wrapper">
-              <div class="left_block">
-                <div class="left__block_title">
-                  <div class="form__logo"></div>
-                  <div class="tickets__title-wrapper">
-                    <h5 class="tickets__title">Booking Tickets</h5> 
-                    <p class="tickets__subtitle">Tour to Louvre</p>
-                  </div>
-                </div>
-                <div class="left__block_form">
-                  <div class="left__block__date">
-                    <input class="tickets__date" type="date">
-                    <input class="tickets__time" type="time">
-                  </div>
-                <div class="left__block_contact">
-                  <input type="text" class="tickets__name">
-                  <input type="email" class="tickets__mail">
-                  <input type="tel" class="tickets__tel">
-                  <select class="tickets__select" name="type">
-                    <option value="Ticket Type">Ticket Type</option>
-                  </select>
-                  <div class="tickets__entry">
-                    <div class="tikets__container-entry">
-                      <h5 class="entry__title">Entry Ticket</h5>
-                      <div class="wrapper__entry">
-                        <div class="basic">
-                          <div class="basic__text">
-                              <p class="basic__text__content">Basic 18+ <span class = "basic__span">(20 </span>€)</p>
-                          </div>
-                          <div class="tickets__choice__selector basic__selector">
-                              <button class="tickets__choice__button basic__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                              <input class="tickets__choice__amount basic__amount" type="number" min="0" max="20" value="2" readonly>
-                              <button class="tickets__choice__button basic__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                          </div>
-                      </div>
-                      <div class="basic">
-                          <div class="basic__text">
-                              <p class="basic__text__content">Senior 65+ <span class = "basic__span">(10 </span>€)</p>
-                          </div>
-                          <div class="tickets__choice__selector basic__selector">
-                              <button class="tickets__choice__button basic__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                              <input class="tickets__choice__amount basic__amount" type="number" min="0" max="20" value="2" readonly>
-                              <button class="tickets__choice__button basic__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                          </div>
-                      </div>
+              <div class="left__block">
+                <div class="left__block__title">
+                    <div class="form__logo"></div>
+                    <div class="title__row">
+                        <h6 class="title__row__content">Booking Tickets</h6>
+                        <p class="title__row__paragraph">Tour to Louvre</p>
                     </div>
-                  </div>
                 </div>
-              </div>
+                <div class="left__block__form">
+                    <div class="left__block__time">
+                        <input class="left__date" type="date">
+                        <input class="left__time" type="time">
+                    </div>
+                    <div class="left__block__next">
+                        <input class="left__name" type="text">
+                        <input class="left__email" type="email">
+                        <input class="left__tel" type="tel">
+                        <select class ="left__select" name="type">
+                            <option value="Permanent exhibition">Permanent exhibition</option>
+                            <option value="Temporary exhibition">Temporary exhibition</option>
+                            <option value="Combined Admission">Combined Admission</option>
+                        </select>
+                        <div class="entry__ticket">
+                            <div class="entry__ticket__container">
+                                <h6 class="entry__ticket__title">Entry Ticket</h6>
+                                <div class="entry__wrapper">
+                                    <div class="basic">
+                                        <div class="basic__text">
+                                            <p class="basic__text__content">Basic 18+ <span class = "basic__span">(20 </span>€)</p>
+                                        </div>
+                                        <div class="tickets__choice__selector basic__selector">
+                                            <button class="tickets__choice__button basic__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                                            <input class="tickets__choice__amount basic__amount" type="number" min="0" max="20" value="2" readonly>
+                                            <button class="tickets__choice__button basic__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="basic">
+                                        <div class="basic__text">
+                                            <p class="basic__text__content">Senior 65+ <span class = "basic__span">(10 </span>€)</p>
+                                        </div>
+                                        <div class="tickets__choice__selector basic__selector">
+                                            <button class="tickets__choice__button basic__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                                            <input class="tickets__choice__amount basic__amount" type="number" min="0" max="20" value="2" readonly>
+                                            <button class="tickets__choice__button basic__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
           <div class="right__block">
             <div class="right__block_container">
               <div class="right__wrapper-title">
@@ -409,8 +411,8 @@
                     <div class="front__card_container">
                       <div class="visa_block">
                         <div class="visa__left_content">
-                          <div class="card__nimber">
-                            <p class="card__number_text">card__number</p>
+                          <div class="card__number">
+                            <p class="card__number_text">card number</p>
                             <input type="text" class="card__number_input"> 
                           </div>
                           <div class="card_date">
@@ -423,6 +425,7 @@
                         </div>
                         <div class="visa__right__content">
                           <div class="visa"></div>  
+                          <div class="master__card"></div>
                           <div class="number__card"></div>
                         </div>
                       </div>
