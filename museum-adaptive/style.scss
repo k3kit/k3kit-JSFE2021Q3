@@ -2031,9 +2031,13 @@
 
     @include media-tablet(){
       width: 590px;
-      height: 1479px;
+      height: 100%;
       top: 0;
-      left: 15%
+      left: 15%;
+      position: fixed;  
+      opacity: 0;
+      overflow-y:auto ;
+      overflow-x: hidden;
     }
    
 
@@ -2065,9 +2069,11 @@
     justify-content: space-between;
     @include media-tablet(){
       flex-direction: column;
-      width: 590px;
-      height: 1479px;
+      width: 100%;
+      height: 100%;
+      padding: 0 30px 0 30px;
     }
+    
   }
   
   .left_block {
@@ -2085,6 +2091,9 @@
     display: flex;
     flex-direction: column;
     width: 400px;
+    @include media-tablet(){
+      width: 100%;
+    }
   }
   
   .left__block__form, .left__block__next {
@@ -2092,7 +2101,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+ 
   .left__name, .left__email, .left__tel, .left__select, .left__date, .left__time {
     width: 190px;
     height: 45px;
@@ -2100,13 +2109,18 @@
   
   .left__name, .left__email, .left__tel, .left__select {
     width: 100%;
+    border: solid 1px;
   }
   
   .left__block__time {
     display: flex;
     justify-content: space-between;
   }
-  
+  .left__date, .left__time{
+    @include media-tablet{
+      width: 251px;
+    }
+  }
   .entry__ticket {
     width: 100%;
     height: 135px;
@@ -2161,6 +2175,11 @@
       height: 2px;
       background-color: rgba(113, 7, 7, 1);
     }
+
+  @include media-tablet(){
+    padding-top: 80px;
+  }
+
   }
   
   .form__logo {
@@ -2301,6 +2320,8 @@
     @include media-laptop(){
       height: 105%;
     }
+    @include media-tablet(){}
+    margin-top: 50px;
   }
   
   .right__block_container {
@@ -2391,7 +2412,7 @@
   .right__block_img {
     width: 150px;
     height: 120px;
-    // background: url(./assets/svg/form/Rectangle\ 4.png) no-repeat;
+    background: url(./assets/svg/form/Rectangle4.png) no-repeat;
     background-size: cover;
   }
   
