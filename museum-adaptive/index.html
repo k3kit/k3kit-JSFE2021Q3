@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <script src="'https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'" async></script>
 </head>
 <body>
             <header class="header"> 
@@ -18,7 +15,7 @@
                     
                         <div class="header__logo">
                             <a class="header__logo-link" href="/" >
-                            <img class="header__logo-pic" src="./assets/svg/Vector.svg" alt="logo moseum" >
+                            <img class="header__logo-pic" src="./assets/svg/Vector.svg"  loading="lazy" alt="logo moseum" >
                         </a>
                         <h1 class="header__logo-title">LOUVRE</h1>
                         </div>
@@ -113,42 +110,42 @@
               <h2 class="visiting__title section-title">Virtual tour</h2>
               <div class="visiting-content">
                 <a class="visiting__item" href="./tours/tour1.html" target="_blank">
-                  <img class="visiting__item-img" src="./assets/img/tours/webp/royalpalace.webp" alt="Royal Palace">
+                  <img class="visiting__item-img" src="./assets/img/tours/webp/royalpalace.webp" loading="lazy" alt="Royal Palace">
                   <div class="visiting__item-content"><h3 class="visiting__item-title section-title ">Royal Palace</h3>
                   <p class="visiting__item-text">360° Virtual Tour</p>
                   <p class="visiting__item-subtext">Google Street Panorama View</p></div>
                   
                 </a>
                 <a class="visiting__item" href="./tours/tour2.html" target="_blank">
-                  <img class="visiting__item-img" src="./assets/img/tours/webp/denonwing.webp" alt="Denon Wing">
+                  <img class="visiting__item-img" src="./assets/img/tours/webp/denonwing.webp"   loading="lazy" alt="Denon Wing">
                   <div class="visiting__item-content"> <h3 class="visiting__item-title section-title">Denon Wing</h3>
                   <p class="visiting__item-text">360° Virtual Tour</p>
                   <p class="visiting__item-subtext">Google Street Panorama View</p></div>
                  
                 </a>
                 <a class="visiting__item" href="./tours/tour3.html" target="_blank">
-                  <img class="visiting__item-img" src="./assets/img/tours/webp/colonnadeperrault.webp" alt="Colonnade Perrault">
+                  <img class="visiting__item-img" src="./assets/img/tours/webp/colonnadeperrault.webp" loading="lazy" alt="Colonnade Perrault">
                   <div class="visiting__item-content"><h3 class="visiting__item-title section-title">Colonnade Perrault</h3>
                   <p class="visiting__item-text">360° Virtual Tour</p>
                   <p class="visiting__item-subtext">Google Street Panorama View</p></div>
                   
                 </a>
                 <a class="visiting__item" href="./tours/tour4.html" target="_blank">
-                  <img class="visiting__item-img" src="./assets/img/tours/webp/greekhall.webp" alt="Greek hall">
+                  <img class="visiting__item-img" src="./assets/img/tours/webp/greekhall.webp" loading="lazy" alt="Greek hall">
                   <div class="visiting__item-content"> <h3 class="visiting__item-title section-title">Greek hall</h3>
                   <p class="visiting__item-text">360° Virtual Tour</p>
                   <p class="visiting__item-subtext">Google Street Panorama View</p></div>
                  
                 </a>
                 <a class="visiting__item" href="./tours/tour5.html" target="_blank">
-                  <img class="visiting__item-img" src="./assets/img/tours/webp/monalisa.webp" alt="Mona Lisa">
+                  <img class="visiting__item-img" src="./assets/img/tours/webp/monalisa.webp" loading="lazy" alt="Mona Lisa">
                   <div class="visiting__item-content"><h3 class="visiting__item-title section-title">Mona Lisa</h3>
                   <p class="visiting__item-text">360° Virtual Tour</p>
                   <p class="visiting__item-subtext">Google Street Panorama View</p></div>
                   
                 </a>
                 <a class="visiting__item" href="./tours/tour6.html" target="_blank">
-                  <img class="visiting__item-img" src="./assets/img/tours/webp/nightpalace.webp" alt="Night Palace">
+                  <img class="visiting__item-img" src="./assets/img/tours/webp/nightpalace.webp" loading="lazy" alt="Night Palace">
                   <div class="visiting__item-content"> <h3 class="visiting__item-title section-title">Night Palace</h3>
                   <p class="visiting__item-text">360° Virtual Tour</p>
                   <p class="visiting__item-subtext">Google Street Panorama View</p></div>
@@ -171,10 +168,10 @@
              <div class="explore__img-container">
               <div class="slider">
                 <div class="explore__img_before">
-                  <img src="./assets/img/explore-slider/after.jpg" alt="picture before">
+                  <img src="./assets/img/explore-slider/after.jpg" loading="lazy" alt="picture before">
                 </div>
                 <div class="explore__img_after">
-                  <img src="./assets/img/explore-slider/before.jpg" alt="picture after">
+                  <img src="./assets/img/explore-slider/before.jpg" loading="lazy" alt="picture after">
                 </div>
                 <div class="change">
                 </div>
@@ -193,7 +190,7 @@
               </div>
               <div class="player">
                 <div class="btn__play"></div>
-                <video class="video__watch" src="./assets/video/video0.mp4" poster="./assets/video/poster0.jpg"></video>
+                <video class="video__watch" src="./assets/video/video0.mp4"  loading="lazy" poster="./assets/video/poster0.jpg"></video>
                 
                 <div class="player__control">
                   <button type="button" class="btn__control-play"></button>
@@ -281,7 +278,7 @@
                           </div>
                           <div class="tickets__total">
                               <h4 class="tickets__type-title tickets__type-title--last">Total €<span>220</span></h4>
-                              <a href="#form_itic" class="tickets__buy-link"> Buy Now</a>
+                              <a href="#form_itic" class="tickets__buy-link">Buy Now</a>
                           </div>
                       </div>
                   </div>
@@ -560,7 +557,10 @@
             </div>
           </div>
       </footer>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-    <script src="./js.js"></script>
+      <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script src="./map.js"></script>
+    <script src="./video.js"></script>
+    <script src="./gallery.js"></script>
 </body>
+
 </html>

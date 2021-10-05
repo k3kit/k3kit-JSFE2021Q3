@@ -12,8 +12,9 @@
   $content-width: 1024px;
   $tablet-width: 768px;
   $mobile-width:420px;
- 
   $section-title: 5rem;
+
+
  @mixin media-laptop{
      @media(max-width:$content-width){@content;}
  }
@@ -65,11 +66,7 @@
     font-size: 10px;
     line-height: 1;
     scroll-behavior: smooth;
-    // background: black;
     font-family: "Roboto", sans-serif;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
   }
   
   html {
@@ -181,24 +178,15 @@
     max-width: 1440px;
     overflow: hidden;
   }
-  
-  /*  header section */
-  
-
-
-
-
 .welcome{
    @include media-laptop{
-     
-       height: 585px;
+    height: 585px;
    }
 }
   .header {
     background-color: #000000;
     color: #ffffff;
     @include media-tablet(){
-      // width: 768px;
       height: 110px;
     }
     @include media-moblie(){
@@ -232,7 +220,6 @@
     @include media-tablet(){
       padding-top: 10px;
     }
-
     @include media-moblie(){
       font-size: 1.6rem;
     }
@@ -251,7 +238,6 @@
     @include media-tablet(){
       padding: 35px 0;
     }
-
     @include media-moblie(){
       padding: 22px 0;
     }
@@ -261,7 +247,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-  
   .header__item {
     margin-right: 54px;
   
@@ -289,11 +274,6 @@
         display: none;
     }
 }
-
-  /*  header section */
-  
-  /* welcome section */
-  
   .welcome {
     background-color: #000000;
     color: #ffffff;
@@ -305,7 +285,6 @@
       height: 544px;
     }
   }
-  
   .welcome__wrapper {
     display: flex;
     justify-content: space-between;
@@ -313,7 +292,6 @@
     padding-bottom: 59px;
 
   }
-  
   .welcome__title {
     text-transform: uppercase;
     font-family: Forum, sans-serif;
@@ -336,8 +314,6 @@
       font-size: 4rem;
       line-height: 6rem;
       padding-left: 10px;
-      /* or 150% */
-      
       text-align: center;
       letter-spacing: 0.5rem;
       text-transform: uppercase;
@@ -450,7 +426,6 @@
         font-weight: 300;
         font-size: 2rem;
         line-height: 23px;
-
         align-items: center;
         text-align: center;
         letter-spacing: 2px;
@@ -487,16 +462,11 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: flex-end;
         gap: 13px;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         background-color: black;
         color: white;
-      
         position: absolute;
         bottom: -59px;
         right: 0;
@@ -513,7 +483,6 @@
       width: 230px;
       bottom: -76px;
       height: 74px;
-      
       padding-right: 116px;
     }
     
@@ -530,14 +499,12 @@
     position: relative;
     background-size: cover;
     @include media-laptop{
-        // background:linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%),url(./assets/img/welcome/bg1024.png) no-repeat;
         width: 700px;
         height: 525px;
        
     }
 
     @include media-tablet(){
-      // background:url(./assets/img/welcome/bg768.png) no-repeat;
       width: 728px;
       height: 546px;
       margin-top: 215px;
@@ -656,9 +623,6 @@
       }
     
   }
-  /* welcome section */
-  
-  /* visiting section */
   
   .visiting {
     background-color: #ffffff;
@@ -776,7 +740,6 @@
     font-size: 3.2rem;
 
     @include media-laptop{
-        // margin-bottom: 22px;
         font-size: 2.8rem;
         letter-spacing: 3px;
     }
@@ -790,7 +753,6 @@
     @include media-moblie(){
       font-size: 1.8rem;
       line-height: 2rem;
-/* identical to box height */
       padding-top: 25px;
       letter-spacing: 0.5rem;
     }
@@ -857,8 +819,6 @@
       font-size: 1.6rem;
     }
   }
-  
-  /* visiting section */
   
   .explore {
     background: #030303;
@@ -993,28 +953,11 @@
     top: 0;
     z-index: 10;
     width: 20px;
-  
-    /* width: 7px;
-    height: 100%; */
-    /* background-color: rgba(255, 255, 255, 1) */
     background: url(./assets/svg/btn/explore_slider.svg);
   }
   
-  /* .change::before{
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px; 
-    left: 50%;
-    top:50%;
-    
-    border: 7px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    
-    transform: translate(-50%,-50%);
-  } */
   
-  /* --------------------section video---------------------- */
+  
   
   .video {
     padding-bottom: 71px;
@@ -1224,8 +1167,6 @@
   
   .player button {
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     border: 0;
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -1253,8 +1194,6 @@
     height: 8px;
     transition: background 450ms ease-in;
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
   }
   
   .btn__control-vol {
@@ -1274,8 +1213,6 @@
     height: 8px;
     transition: 450ms ease-in;
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
   
     &::-webkit-slider-thumb {
       width: 15px;
@@ -1285,8 +1222,6 @@
       background: #a3a3a3;
       transition: 0.3s;
       appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
     }
   }
   
@@ -1298,8 +1233,6 @@
     background: #a3a3a3;
     transition: 0.3s;
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
   }
   
   .input__control-vol::-webkit-slider-thumb:hover, .input__control-progress::-webkit-slider-thumb:hover {
@@ -1438,16 +1371,7 @@
 
     @include media-laptop(){
       width: calc(32% - 12px);
-    }
-      // &:nth-child(3n + 1) {
-      //   transform: translateY(-50px);
-      // }
-
-      // &:nth-child(2n + 1) {
-      //   transform: translateY(-10px);
-      // }
-     
-    
+    }   
     @include media-tablet(){
       width: calc(49% - 12px);
       &:nth-child(3n + 2) {
@@ -1751,11 +1675,7 @@
     border-radius: 50%;
     background: rgb(0, 0, 0);
   }
-  /* --------------------section tickets---------------------- */
   
-  
-  
-  /* --------------------section tickets---------------------- */
   
   .parallax {
     width: 100%;
