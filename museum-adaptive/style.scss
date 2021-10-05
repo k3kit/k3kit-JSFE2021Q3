@@ -1948,14 +1948,17 @@
         margin-top: 57px;
 
     }
+    @include media-tablet(){
+      flex: 0 0 509px;
+      margin-top: 32px;
+    }
     @include media-moblie(){
       flex: 0;
       margin-left: 60px;
       margin-top: 32px;
       margin-left: 127px;
     }
-    @include media-tablet(){flex: 0 0 509px;
-    margin-top: 32px;}
+    
     
   }
   

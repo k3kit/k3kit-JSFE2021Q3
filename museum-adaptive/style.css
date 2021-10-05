@@ -2500,6 +2500,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .footer__nav {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 509px;
+            flex: 0 0 509px;
+    margin-top: 32px;
+  }
+}
+
 @media (max-width: 420px) {
   .footer__nav {
     -webkit-box-flex: 0;
@@ -2508,15 +2517,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 60px;
     margin-top: 32px;
     margin-left: 127px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer__nav {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 509px;
-            flex: 0 0 509px;
-    margin-top: 32px;
   }
 }
 
