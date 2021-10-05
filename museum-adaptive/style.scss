@@ -1333,10 +1333,15 @@
       @include media-tablet(){
         width: 354px;
         height: 199px;
+        
         &:nth-child(3){
 
             display: none;
         }
+        &:nth-child(1){
+
+          margin-right: 20px;
+      }
       }
 
       @include media-moblie(){
@@ -1346,6 +1351,10 @@
 
           display: none;
       }
+      &:nth-child(1){
+
+        margin-right: 20px;
+    }
       }
     
   }
@@ -1449,14 +1458,16 @@
     
     @include media-tablet(){
       width: calc(49% - 12px);
-      
+      &:nth-child(3n + 2) {
+        transform: translateY(0px);
+      }
 
-      &:nth-child(2n + 1) {
+      &:nth-child(2n + 2) {
         transform: translateY(-50px);
       }
 
       &:nth-child(2n + 2) {
-        transform: translateY(-10px);
+        transform: translateY(-50px);
       }
     }
 
