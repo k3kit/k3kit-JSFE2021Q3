@@ -1342,11 +1342,12 @@
       @include media-moblie(){
         width: 180px;
         height: 101px;    
-      }
-      &:nth-child(3){
+        &:nth-child(3){
 
-        display: none;
-    }
+          display: none;
+      }
+      }
+    
   }
   
   /* --------------------section video---------------------- */
