@@ -13,3 +13,6 @@ vollvl.addEventListener('input', function () {
     this.style.background =
         `linear-gradient(to right, #ff0000 0%, #ff0000 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`
 })
+
+
+
