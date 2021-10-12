@@ -15,4 +15,37 @@ vollvl.addEventListener('input', function () {
 })
 
 
+// const progress = document.querySelector('.progress');
+// const vol = document.querySelector('.vol');
+// const player = document.getElementById('video');
 
+// const videoWatch = document.querySelector('.video__watch');
+// 
+// const control = document.querySelector('.player__control');
+// const controlWrapper = document.querySelector('.player__wrapper');
+
+const playButton = document.querySelector(".btn__play");
+
+const player = document.querySelector(".player");
+const video = player.querySelector(".video__watch");
+const progressT = document.querySelector('.progress');
+const playBtn = document.querySelector('.btn__control-play');
+// var progressBar = player.querySelector(".progress__filled");
+const toggle = player.querySelector(".toggle");
+var skipButtons = player.querySelectorAll("[data-skip]");
+var ranges = player.querySelectorAll(".player__slider");
+
+function tooglePlay(){
+   const method = video.paused ? 'play'  : 'pause';
+   video[method]();
+}
+function updateBtn(){
+    playButton.classList.add('hidden');
+     toggle.classList.toggle('hidden')   
+}
+
+
+video.addEventListener('click', tooglePlay);
+toggle.addEventListener('click', tooglePlay);
+playButton.addEventListener('click', updateBtn);
+toggle.addEventListener('click', updateBtn);

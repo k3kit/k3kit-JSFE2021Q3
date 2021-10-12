@@ -1666,6 +1666,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.btn__play.hidden {
+  display: none;
+}
+
 .player__control {
   position: absolute;
   display: -webkit-box;
@@ -1710,6 +1714,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 23px;
   height: 31px;
   background-image: url("./assets/svg/player/icon-player-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.btn__control-play.hidden {
+  width: 23px;
+  height: 31px;
+  background-image: url("./assets/svg/player/pause.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1790,7 +1804,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* --------------------section video---------------------- */
+/* --------------------section a---------------------- */
 /* --------------------section gallery---------------------- */
 .gallery {
   background: #030303;
