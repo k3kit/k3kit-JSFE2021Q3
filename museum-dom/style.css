@@ -1732,8 +1732,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .input__control-progress {
   width: 67%;
-  background: -webkit-gradient(linear, left top, right top, from(#ff0000), color-stop(47%, #ff0000), color-stop(47%, #c4c4c4), to(#c4c4c4));
-  background: linear-gradient(to right, #ff0000 0%, #ff0000 47%, #c4c4c4 47%, #c4c4c4 100%);
   border-radius: 0;
   height: 8px;
   -webkit-transition: background 450ms ease-in;
