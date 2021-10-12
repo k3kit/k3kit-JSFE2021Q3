@@ -1751,6 +1751,16 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.btn__control-vol.hidden {
+  width: 38px;
+  height: 31px;
+  background-image: url("./assets/svg/player/mute.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
 .input__control-vol {
   width: 11%;
   background: -webkit-gradient(linear, left top, right top, from(#ff0000), color-stop(32%, #ff0000), color-stop(32%, #c4c4c4), to(#c4c4c4));
@@ -1796,6 +1806,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 35px;
   height: 35px;
   background-image: url("./assets/svg/player/icon-player-fullscreen.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.player__control-fullsc.hidden {
+  width: 35px;
+  height: 35px;
+  background-image: url(./assets/svg/player/fullscreen_exit.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
