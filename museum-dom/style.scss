@@ -530,15 +530,17 @@
   }
   .swiper-slide{
     display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
   }
   .swiper-slide.active{
     display: block;
-    transition: left .2s ease-out;
     
   }
 
    .swiper-slide img {
-      max-width: 100%;
+      // max-width: 100%;
   }
   .span__louvre{
     @include media-moblie(){
@@ -628,6 +630,16 @@
     align-items: center;
     padding: 0px;
   }
+
+  .slider__wrapper{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+  
   
   .btn__left {
     background: url(./assets/svg/btn/btnleft.svg);
@@ -709,7 +721,7 @@
   .visiting-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 0px 59px;
+    gap: 38px 30px;
     padding-bottom: 50px;
     @include media-laptop{
         padding: 0px 63px 20px 107px;
@@ -850,8 +862,10 @@
   
   .explore {
     background: #030303;
+
+
+
     @include media-tablet(){
-      
        height: 908px;
     }
     @include media-moblie(){
@@ -1633,6 +1647,7 @@ font-size: 0;
     }
   }
   .tickets__content-img{
+    background: url(./assets/img/tickets/webp/image.webp) ;
     width: 720px;
     height: 550px;
     @include media-laptop(){
