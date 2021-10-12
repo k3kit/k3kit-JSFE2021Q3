@@ -1319,6 +1319,13 @@ font-size: 0;
     }
   }
   
+
+  
+  .btn__play.hidden {
+   display:  none;
+  }
+
+
   .player__control {
     position: absolute;
     display: flex;
@@ -1357,7 +1364,15 @@ font-size: 0;
     background-size: contain;
     cursor: pointer;
   }
-  
+  .btn__control-play.hidden {
+    width: 23px;
+    height: 31px;
+    background-image: url('./assets/svg/player/pause.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+  }
   .input__control-progress {
     width: 67%;
     background: linear-gradient(to right, #ff0000 0%, #ff0000 47%, #c4c4c4 47%, #c4c4c4 100%);
@@ -1422,7 +1437,7 @@ font-size: 0;
 
  
   
-  /* --------------------section video---------------------- */
+  /* --------------------section a---------------------- */
   
   /* --------------------section gallery---------------------- */
   
