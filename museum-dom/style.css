@@ -1477,6 +1477,50 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.video__item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video__item ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.video__item ul li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 0;
+}
+
+.video__item {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 0;
+}
+
+.video__item:hover {
+  background: #2a2828;
+}
+
 .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1495,17 +1539,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .slick-dots button {
   display: block;
-  width: 1rem;
-  height: 1rem;
-  padding: 0;
-  border: none;
-  border-radius: 100%;
-  background-color: orange;
-  text-indent: -9999px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 0;
 }
 
 .slick-dots li.slick-active button {
-  background-color: red;
+  background: #2a2828;
 }
 
 .video__menu {
@@ -1792,6 +1836,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   cursor: ew-resize;
   background: #a3a3a3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-appearance: none;
           appearance: none;
 }
@@ -1802,6 +1848,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   cursor: ew-resize;
   background: #a3a3a3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-appearance: none;
   cursor: ew-resize;
   appearance: none;
