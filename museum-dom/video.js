@@ -14,7 +14,7 @@ const volumeBtn = document.querySelector('.btn__control-vol');
 const volumeProgress = document.querySelector('.input__control-vol');
 const volumeToggleBtn = document.querySelector('.btn__control-vol');
 const btnFullScr = document.querySelector('.player__control-fullsc')
-// let volumeStorage = 0.4;
+
 
 function tooglePlay(){
    const method = video.paused ? 'play'  : 'pause';
@@ -38,7 +38,7 @@ const change_vol = () => {
 };
 
 function changeMuteVol(){
-     localStorage.setItem("volume", video.volume);
+    //  localStorage.setItem("volume", video.volume);
   if (video.volume == 0) {
         volumeBtn.classList.add("hidden");
 
@@ -47,12 +47,12 @@ volumeBtn.classList.remove("hidden");
 
     }
 }
-volume.addEventListener("input", () => {
-if (volume.value != 0) {
-    video.volume = volume.value;
-    video.muted = false;
-}
-});
+// volume.addEventListener("input", () => {
+// if (volume.value != 0) {
+//     video.volume = volume.value;
+//     video.muted = false;
+// }
+// });
 
 
 volume.addEventListener('input', function () {
@@ -60,7 +60,7 @@ volume.addEventListener('input', function () {
     const value = video.volume * 100;
     this.style.background =
         `linear-gradient(to right, #ff0000 0%, #ff0000 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`;
-        changeMuteVol()
+        // changeMuteVol()
 })
 
 volumeBtn.addEventListener("click", () => {
@@ -117,6 +117,7 @@ function fullScreenToggle() {
   }
 }
 
+
 volume.addEventListener('change',handleRangeUpdate);
 video.addEventListener('click', tooglePlay);
 toggle.addEventListener('click', tooglePlay);
@@ -129,3 +130,12 @@ progress.addEventListener('change',change_time);
 // volumeBtn.addEventListener('click', muteToggle);
 btnFullScr.addEventListener('click',fullScreenToggle);
 volumeProgress.addEventListener('input',changeMuteVol);
+
+
+document.addEventListener('keydown', function(event) {
+  if (event.code == 'Space') tooglePlay();
+  if (event.code == 'KeyF') fullScreenToggle();
+  if (event.code == 'KeyM') volumeChange();;
+  if (event.code == 'Comma' && event.shiftKey) video.playbackRate -= 0.25;
+  if (event.code == 'Period' && event.shiftKey) video.playbackRate += 0.25;
+});
