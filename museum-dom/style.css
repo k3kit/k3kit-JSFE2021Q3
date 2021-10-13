@@ -1792,8 +1792,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   cursor: ew-resize;
   background: #a3a3a3;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   -webkit-appearance: none;
           appearance: none;
 }
@@ -1804,14 +1802,15 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   cursor: ew-resize;
   background: #a3a3a3;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   -webkit-appearance: none;
-          appearance: none;
+  cursor: ew-resize;
+  appearance: none;
 }
 
 .input__control-vol::-webkit-slider-thumb:hover, .input__control-progress::-webkit-slider-thumb:hover {
   background: #989898;
+  -webkit-appearance: none;
+  cursor: ew-resize;
 }
 
 .player__control-fullsc {

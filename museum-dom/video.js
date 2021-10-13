@@ -14,7 +14,7 @@ const volumeBtn = document.querySelector('.btn__control-vol');
 const volumeProgress = document.querySelector('.input__control-vol');
 const volumeToggleBtn = document.querySelector('.btn__control-vol');
 const btnFullScr = document.querySelector('.player__control-fullsc')
-let volumeStorage = 0.4;
+// let volumeStorage = 0.4;
 
 function tooglePlay(){
    const method = video.paused ? 'play'  : 'pause';
@@ -30,23 +30,42 @@ const volumeChange = () => {
 
   };
 const change_vol = () => {
-    localStorage.setItem("volume", video.volume);
+   localStorage.setItem("volume", video.volume);
     if (video.volume == 0) {
         volumeBtn.classList.toggle("hidden");
        
     }
 };
 
+function changeMuteVol(){
+     localStorage.setItem("volume", video.volume);
+  if (video.volume == 0) {
+        volumeBtn.classList.add("hidden");
+
+    }else{
+volumeBtn.classList.remove("hidden");
+
+    }
+}
+volume.addEventListener("input", () => {
+if (volume.value != 0) {
+    video.volume = volume.value;
+    video.muted = false;
+}
+});
+
+
 volume.addEventListener('input', function () {
+  video.volume = volume.value;
     const value = video.volume * 100;
     this.style.background =
-        `linear-gradient(to right, #ff0000 0%, #ff0000 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`
+        `linear-gradient(to right, #ff0000 0%, #ff0000 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`;
+        changeMuteVol()
 })
 
 volumeBtn.addEventListener("click", () => {
     if (video.muted == true) {
       volume.value = localStorage.getItem("volume_value");
-  
       video.muted = false;
     } else {
       video.muted = true;
@@ -56,11 +75,11 @@ volumeBtn.addEventListener("click", () => {
     volumeChange();
   });
 
-volume.addEventListener("input", () => {
-if (volume.value != 0) {
-    video.muted = false;
-}
-});
+// volume.addEventListener("input", () => {
+// if (volume.value != 0) {
+//     video.muted = false;
+// }
+// });
 
 function handleProgress(){
     const value= (video.currentTime/ video.duration)*100;
@@ -109,3 +128,4 @@ progress.addEventListener('change',change_time);
 // // volumeBtn.addEventListener('click', change_vol);
 // volumeBtn.addEventListener('click', muteToggle);
 btnFullScr.addEventListener('click',fullScreenToggle);
+volumeProgress.addEventListener('input',changeMuteVol);
