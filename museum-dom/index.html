@@ -185,7 +185,7 @@
                 <p  class="explore__subtext section-text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
              
              <div class="explore__img-container">
-              <div class="slider">
+              <div class="slider_exp">
                 <div class="explore__img_before">
                   <img src="./assets/img/explore-slider/after.jpg" loading="lazy" alt="picture before">
                 </div>
@@ -210,7 +210,7 @@
               <p class="video__text section-text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
               </div>
               <div class="player">
-                <div class="slider slider-for">
+                <div class="slider">
                 <div class="btn__play"></div>
                 <video class="video__watch" src="./assets/video/video0.mp4"  loading="lazy" poster="./assets/video/poster0.jpg"></video>
                 </div>
@@ -227,19 +227,21 @@
             </div>
               <div class="slider__container">
                 <div class="video__player-slider">
-                <iframe class="iframe__video" src="https://www.youtube.com/embed/aWmJ5DgyWPI"  loading = "lazy" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                 <iframe class="iframe__video" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading = "lazy" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                 <iframe class="iframe__video"  src="https://www.youtube.com/embed/NOhDysLnTvY"  loading = "lazy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                 <iframe  class="iframe__video" src="https://www.youtube.com/embed/2OR0OCr6uRE"  loading = "lazy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="iframe__video"  loading = "lazy" src="https://www.youtube.com/embed/aWmJ5DgyWPI"   title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                 <iframe class="iframe__video"  loading = "lazy" src="https://www.youtube.com/embed/Vi5D6FKhRmo"  title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                 <iframe class="iframe__video"  loading = "lazy"  src="https://www.youtube.com/embed/NOhDysLnTvY"   title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                 <iframe  class="iframe__video" loading = "lazy"  src="https://www.youtube.com/embed/2OR0OCr6uRE"   title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 <iframe class="iframe__video"  loading = "lazy" src="https://www.youtube.com/embed/Vi5D6FKhRmo"  title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                 
                 </div>
               </div>
                 <div class="video__btn_slider">
                  <ul class="video__menu">
                    <li class="video__btn">
-                     <button class="video__btn-left"></button>
+                     <button class="video__btn-left btn-l"></button>
                    </li>
-                    <li class="video__item"></li>
-                   <li class="video__btn"><button class="video__btn-right"></button></li>
+                      <ul class="video_dots"></ul>
+                   <li class="video__btn"><button class="video__btn-right btn-r"></button></li>
                  </ul>
                 </div>
             </div>
@@ -589,6 +591,7 @@
     <script src="./gallery.js"></script>
     <script src="./js.js"></script>
     <script src="./slider.js"></script>
+    
 </body>
 
 </html>

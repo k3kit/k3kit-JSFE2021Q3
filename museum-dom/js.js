@@ -10,7 +10,7 @@
 
 // // map.addControl(new mapboxgl.NavigationControl());
 
-const slider = document.querySelector('.slider');
+const slider = document.querySelector('.slider_exp');
 const before = document.querySelector('.explore__img_before');
 const beforeImage= before.querySelector('img');
 const change = document.querySelector('.change');
