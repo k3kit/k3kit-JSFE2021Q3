@@ -1430,7 +1430,7 @@ font-size: 0;
       border-radius: 50%;
       cursor: ew-resize;
       background: #a3a3a3;
-      transition: 0.3s;
+      // transition: 0.3s;
       appearance: none;
     }
   }
@@ -1441,12 +1441,24 @@ font-size: 0;
     border-radius: 50%;
     cursor: ew-resize;
     background: #a3a3a3;
-    transition: 0.3s;
+    // transition: 0.3s;
+    -webkit-appearance: none;
+    cursor: ew-resize;
     appearance: none;
   }
   
+  // .progress::-webkit-slider-thumb {
+  //   width: 20px;
+  //   height: 20px;
+  //   border-radius: 50%;
+  //   -w none;
+  //   cursor: ew-resize;
+  //   background: #434343;ebkit-appearance:
+  // }
   .input__control-vol::-webkit-slider-thumb:hover, .input__control-progress::-webkit-slider-thumb:hover {
     background: #989898;
+    -webkit-appearance: none;
+    cursor: ew-resize;
   }
   
   .player__control-fullsc {
