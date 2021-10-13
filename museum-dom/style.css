@@ -792,7 +792,6 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   overflow: hidden;
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -1193,12 +1192,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.slider {
+.slider_exp {
   position: relative;
   overflow: hidden;
 }
 
-.slider img {
+.slider_exp img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1397,6 +1396,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider__container {
   overflow: hidden;
+  min-width: 0;
+}
+
+.video__player-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  -webkit-transition: .2s;
+  transition: .2s;
   min-width: 0;
 }
 
@@ -1668,6 +1680,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 
 @media (max-width: 1024px) {

@@ -635,7 +635,6 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -940,7 +939,7 @@
     }
   }
   
-  .slider {
+  .slider_exp {
     position: relative;
     overflow: hidden;
   
@@ -1111,11 +1110,11 @@
 
 
   .video__player-slider {
-    // display: flex;
-    // justify-content: space-between;
-    // padding-top: 40px;
-    // transition: .2s;
-    // min-width: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    transition: .2s;
+    min-width: 0;
     
     @include media-tablet(){
       padding-top: 20px;
@@ -1316,6 +1315,7 @@ font-size: 0;
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
+    min-width: 0;
     @include media-laptop{
         width: 100%;
         height: 504px;
@@ -1335,10 +1335,8 @@ font-size: 0;
   
   .video__watch {
     width: 100%;
-    @include media-laptop{
-       
-    }
   }
+
   
   .btn__play {
     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(20deg) brightness(100%) contrast(106%);
