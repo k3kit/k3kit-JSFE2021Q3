@@ -217,11 +217,12 @@
                 <div class="player__control">
                  
                     <button type="button" class="btn__control-play toggle"></button>
-                  <input type="range" value="0" min="0" max="1" step="any" class="input__control-progress player__slider">
+                  <input type="range"   name="progress"  value="0" min="0" max="1" step="any" class="input__control-progress player__slider">
                   <button type="button" class="btn__control-vol"></button>
-                  <input type="range"  min="0" max="1" step="any" value="0.4" name='volume' class="input__control-vol player__slider">
+                  <input type="range"   min="0" max="1" step="any" value="0.4" name='volume' class="input__control-vol player__slider">
                   <button type="button" class="player__control-fullsc"></button>
-              
+                  <button class="play control-button"></button>
+                  
                 </div>
               </div>
             </div>
@@ -269,16 +270,16 @@
                       <div class="tickets__buy">
                           <div class="tickets__type">
                               <h4 class="tickets__type-title">Ticket Type</h4>
-                              <label class="tickets__type-item-container">Permanent exhibition
-                                  <input class="tickets__type-item-input" type="radio" checked="checked" name="radio">
+                              <label class="tickets__type-item-container" id="first">Permanent exhibition
+                                  <input class="tickets__type-item-input" type="radio"  id="r1" checked="checked" name="radio">
                                   <span class="tickets__type-item-checkmark"></span>
                                 </label>
-                                <label class="tickets__type-item-container">Temporary exhibition
-                                  <input class="tickets__type-item-input" type="radio" name="radio">
+                                <label class="tickets__type-item-container" id='second'>Temporary exhibition
+                                  <input class="tickets__type-item-input" type="radio"  id="r2" name="radio">
                                   <span class="tickets__type-item-checkmark"></span>
                                 </label>
-                                <label class="tickets__type-item-container">Combined Admissionn
-                                  <input class="tickets__type-item-input" type="radio" name="radio">
+                                <label class="tickets__type-item-container" id='third'>Combined Admissionn
+                                  <input class="tickets__type-item-input"  type="radio" id='r3'name="radio">
                                   <span class="tickets__type-item-checkmark"></span>
                                 </label>
                           </div>
@@ -287,22 +288,22 @@
                               <div class="tickets__amount-btn"> 
                                   <p class="tickets__amount-suptitle">Basic 18+</p>
                                   <div class="tickets__amount-btn-wrapper">
-                                      <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-                                      <input type="number" min="0" max="100" value="1" readonly class="tickets__amount-number">
-                                      <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                      <button  class="tickets__btn" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                      <input id="basic" type="number" min="0" max="20" value="1" readonly class="tickets__amount-number">
+                                      <button  class="tickets__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                   </div>
                               </div>
                               <div class="tickets__amount-btn"> 
                                   <p class="tickets__amount-suptitle">Senior 65+</p>
                                   <div class="tickets__amount-btn-wrapper">
-                                     <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-                                     <input type="number" min="0" max="100" value="1" readonly class="tickets__amount-number">
-                                     <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                     <button  class="tickets__btn" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                     <input id='senior' type="number" min="0" max="20" value="1" readonly class="tickets__amount-number">
+                                     <button class="tickets__btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                  </div>
                               </div>
                           </div>
                           <div class="tickets__total">
-                              <h4 class="tickets__type-title tickets__type-title--last">Total €<span>220</span></h4>
+                              <h4 class="tickets__type-title tickets__type-title--last">Total €<span id="total">0</span></h4>
                               <a href="#form_itic" class="tickets__buy-link">Buy Now</a>
                           </div>
                       </div>
@@ -591,6 +592,7 @@
     <script src="./gallery.js"></script>
     <script src="./js.js"></script>
     <script src="./slider.js"></script>
+      <script src="./tickets.js"></script>
     
 </body>
 

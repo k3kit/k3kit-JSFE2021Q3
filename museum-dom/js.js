@@ -36,18 +36,18 @@ const pauseEvenst =(e)=>{
   return false;
 }
 
-body.addEventListener('mousedown',()=>{
+slider.addEventListener('mousedown',()=>{
   isActive = true
 })
-body.addEventListener('mouseup',()=>{
+slider.addEventListener('mouseup',()=>{
   isActive = false
 })
 
 
-body.addEventListener('mouseleave', () => {
+slider.addEventListener('mouseleave', () => {
 	isActive = false;
 });
-body.addEventListener('mousemove',(e)=>{
+slider.addEventListener('mousemove',(e)=>{
   if (!isActive) {
 		return;
 	}
@@ -89,3 +89,6 @@ if(animItems.length>0){
         return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
     }
 }
+
+
+
