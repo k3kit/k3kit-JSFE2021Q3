@@ -17,6 +17,7 @@ const btnFullScr = document.querySelector('.player__control-fullsc')
 
 function tooglePlay(){
    const method = video.paused ? 'play'  : 'pause';
+
    video[method]();
 }
 function updateBtn(){
@@ -132,9 +133,12 @@ volumeProgress.addEventListener('input',changeMuteVol);
 
 
 document.addEventListener('keydown', function(event) {
-  if (event.code == 'Space') tooglePlay();
+  if (event.code == 'Space') tooglePlay()
+        event.preventDefault(false);
   if (event.code == 'KeyF') fullScreenToggle();
-  if (event.code == 'KeyM') volumeChange();;
+  if (event.code == 'KeyM') volumeChange();
   if (event.code == 'Comma' && event.shiftKey) video.playbackRate -= 0.25;
   if (event.code == 'Period' && event.shiftKey) video.playbackRate += 0.25;
 });
+
+document.add
