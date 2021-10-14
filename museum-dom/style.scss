@@ -73,13 +73,13 @@
     scroll-behavior: smooth;
   }
   
-  input, button, textarea {
+ button, textarea {
     font-family: inherit;
   }
   
-  input::-ms-clear {
-    display: none;
-  }
+  // input::-ms-clear {
+  //   display: none;
+  // }
   
   button {
     cursor: pointer;
@@ -1418,13 +1418,25 @@ font-size: 0;
   }
   .input__control-progress {
     width: 67%;
+    display: block;
     // background: linear-gradient(to right, #ff0000 0%, #ff0000 47%, #c4c4c4 47%, #c4c4c4 100%);
     border-radius: 0;
     height: 8px;
+    outline: none;
     transition: background 450ms ease-in;
-    appearance: none;
+    -webkit-appearance: none;
+
+   
   }
-  
+  .input__control-progress::-webkit-slider-thumb {
+    max-width: 15px;
+    width: 100%;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #ffffff;
+  }
   .btn__control-vol {
     width: 38px;
     height: 31px;
@@ -1450,40 +1462,41 @@ font-size: 0;
     background: linear-gradient(to right, #ff0000 0%, #ff0000 32%, #c4c4c4 32%, #c4c4c4 100%);
     border-radius: 0;
     height: 8px;
-    transition: 450ms ease-in;
-    appearance: none;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
   
-    &::-webkit-slider-thumb {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      cursor: ew-resize;
-      background: #a3a3a3;
-      transition: 0.3s;
-      appearance: none;
-    }
+    
   }
-  
-  .input__control-progress::-webkit-slider-thumb {
+  .input__control-vol::-webkit-slider-thumb {
+ 
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    cursor: ew-resize;
-    background: #a3a3a3;
-    transition: 0.3s;
     -webkit-appearance: none;
-    cursor: ew-resize;
-    appearance: none;
+  cursor: ew-resize;
+  background: #ffffff;
   }
-  
-  // .progress::-webkit-slider-thumb {
-  //   width: 20px;
-  //   height: 20px;
+  // .input__control-progress::-webkit-slider-thumb {
+  //   width: 15px;
+  //   height: 15px;
   //   border-radius: 50%;
-  //   -w none;
   //   cursor: ew-resize;
-  //   background: #434343;ebkit-appearance:
+  //   background: #a3a3a3;
+  //   transition: 0.3s;
+  //   -webkit-appearance: none;
+  //   cursor: ew-resize;
+  //   appearance: none;
   // }
+  
+  // // .progress::-webkit-slider-thumb {
+  // //   width: 20px;
+  // //   height: 20px;
+  // //   border-radius: 50%;
+  // //   -w none;
+  // //   cursor: ew-resize;
+  // //   background: #434343;ebkit-appearance:
+  // // }
   .input__control-vol::-webkit-slider-thumb:hover, .input__control-progress::-webkit-slider-thumb:hover {
     background: #989898;
     -webkit-appearance: none;

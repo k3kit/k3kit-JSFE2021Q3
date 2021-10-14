@@ -5,7 +5,6 @@ const vollvl = document.querySelector('.input__control-vol');
 const playButton = document.querySelector(".btn__play");
 const player = document.querySelector(".player");
 const video = player.querySelector(".video__watch");
-const progressT = document.querySelector('.progress');
 const playBtn = document.querySelector('.btn__control-play');
 const toggle = player.querySelector(".toggle");
 const ranges = player.querySelectorAll(".player__slider");
