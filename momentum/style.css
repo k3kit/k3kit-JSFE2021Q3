@@ -99,10 +99,14 @@ body {
   background-repeat: no-repeat;
   cursor: pointer; 
   background-image: url('./assets/svg/pauseLI.svg');
+ 
 }
 
 
-
+.item-active{
+  color: rgb(173, 173, 173);
+  transform: scale(1.1);
+}
 
 .player-icon,
 .slider-icon,
@@ -224,10 +228,7 @@ body {
   border-bottom: 1px solid #fff;
   background-color: transparent;
 }
-.item-active{
-  color: rgb(173, 173, 173);
-  transform: scale(1.1);
-}
+
 .city::placeholder {  
   font-size: 20px;
   color: #fff;
@@ -952,3 +953,11 @@ margin-bottom: 15px;
   flex-wrap: wrap;
   gap: 500px;
  }
+
+ .show-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 29px;
+}
