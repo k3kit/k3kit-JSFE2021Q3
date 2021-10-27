@@ -224,7 +224,10 @@ body {
   border-bottom: 1px solid #fff;
   background-color: transparent;
 }
-
+.item-active{
+  color: rgb(173, 173, 173);
+  transform: scale(1.1);
+}
 .city::placeholder {  
   font-size: 20px;
   color: #fff;
