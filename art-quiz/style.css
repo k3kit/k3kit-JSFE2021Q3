@@ -584,8 +584,7 @@ background-position: center;
 
 
 .author__answers-item:hover {
-  cursor: pointer;
-  animation:  2s linear infinite;  
+  cursor: pointer; 
   z-index: 10;
 }
 
@@ -740,16 +739,33 @@ transition: 0.7s;
 
 .number-cat{
   color: #FFBCA2;
+  border-radius: 2px solid #FFBCA2;
 }
 
 
 .cat-author-item.played {
   filter: none;
+
 }
 
+
 .score-cat {
-  color: #FFBCA2;
+  color: #fca380;
   font-size: 2rem;
+  /* border: 2px solid; */
+  /* border-radius: 11px; */
+  background-image: url(./img/score.png);
+  background-repeat: no-repeat;
+  background-position: 82px;
+  background-size: 36px;
+  /* width: 20px; */
+  /* height: 20px; */
+  margin: 42px;
+}
+
+.score-cat:hover {
+  transform: scale(1.5);
+  transition: 0.7s;
 }
 
 .cat-author-item:hover {
