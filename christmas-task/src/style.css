@@ -351,9 +351,9 @@ output {
   outline: none;
 }
 
-input[type="range"] {
+/* input[type="range"] {
   margin: 10px;
-}
+} */
 
 .card-container{
   display: flex;
@@ -476,3 +476,4 @@ input[type="range"] {
   background-image: url(./assets/svg/logo.svg);
   transition: .3s;
 }
+
