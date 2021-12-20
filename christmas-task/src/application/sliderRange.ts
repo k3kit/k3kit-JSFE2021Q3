@@ -29,7 +29,7 @@ countSlider.noUiSlider.on('change', function (values: string[], handle: string |
   
 });
 }
-counSlider()
+
   
   
 const  yearSlider = <target>document.querySelector('.year-slider');
@@ -57,4 +57,3 @@ yearSlider.noUiSlider.on('change', function (values: { [x: string]: string; }, h
 });
 }
 
-yearSlide()
