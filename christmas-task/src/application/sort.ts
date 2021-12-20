@@ -1,7 +1,7 @@
 import { Array2, Card, cardContainer } from "..";
 
 const sortSelect = document.querySelector('.sort-select') as HTMLInputElement;
-function SortSel() {
+export function SortSel() {
   sortSelect.addEventListener("change", function () {
     switch (this.value) {
       case "sort-name-max":{
