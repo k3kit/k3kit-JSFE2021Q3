@@ -1,4 +1,5 @@
  export interface ICardData{
+  length?: number | undefined;
   num: number,
   name: string,
   count: number,
@@ -32,10 +33,6 @@ type ICardsDto = Record<string, ICardDto>;
  export class CardDataModel{
   data!: Array<ICardData>;
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor(){}
-
-
    public  async build(){
      this.data = await this.loadCardData('./data.json');
      return this;
@@ -61,4 +58,6 @@ type ICardsDto = Record<string, ICardDto>;
       return modelData;
     })
   }
+
+
 }
