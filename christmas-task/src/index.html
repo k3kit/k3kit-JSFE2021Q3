@@ -22,7 +22,7 @@
             </nav>
             <div class="header-controls">
                 <input type="search" class="search" autocomplete="off" placeholder="Поиск" autofocus />
-                <div class="select"><span>0</span></div>
+                <div class="select"><span class="item-span">0</span></div>
             </div>
             <div id="popup">
                 <div class="popup-container">
@@ -47,34 +47,34 @@
                 </div>
                 <div class="filter">
                     <div class="form">Форма
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <button class="shape" data-filters="колокольчик" ></button>
+                        <button class="shape" data-filters="шар"></button>
+                        <button class="shape" data-filters="шишка"></button>
+                        <button class="shape" data-filters="фигурка"></button>
+                        <button class="shape" data-filters="снежинка"></button>
                     </div>
                     <div class="color">Цвет
-                        <button class="active"></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <button class="color-filter" class="active" data-filter="белый"></button>
+                        <button  class="color-filter"  data-filter="желтый"></button>
+                        <button class="color-filter"  data-filter="красный"></button>
+                        <button class="color-filter"  data-filter="синий"></button>
+                        <button  class="color-filter" data-filter="зелёный"></button>
                     </div>
                     <div class="size">
                         <div class="size-title">размер</div>
                         <div class="size-group">
                             <input class="size-input" id="checkbox1" type="checkbox" />
-                            <label for="checkbox1" class="size-input-label"></label> <span>Большой</span>
+                            <label for="checkbox1" class="size-input-label" data-filter="большой"></label> <span>Большой</span>
                             <input class="size-input" id="checkbox2" type="checkbox" />
-                            <label for="checkbox2" class="size-input-label"></label> <span>Средний</span>
+                            <label for="checkbox2" class="size-input-label" data-filter="средний"></label> <span>Средний</span>
                             <input class="size-input" id="checkbox3" type="checkbox" />
-                            <label for="checkbox3" class="size-input-label"></label> <span>Маленький</span>
+                            <label for="checkbox3" class="size-input-label" data-filter="малый"></label> <span>Маленький</span>
                         </div>
                     </div>
                     <div class="favorite">Только любимые
                         <div class="favorite-group">
                             <input type="checkbox" class="favorite-input" id="checkbox" />
-                            <label for="checkbox" class="favorite-input-label"></label>
+                            <label for="checkbox" class="favorite-input-label" data-filter="true"></label>
                         </div>
                     </div>
                 </div>
@@ -82,10 +82,10 @@
                     <div class="count">
                         <span>Количество экземпляров</span>
                         <div class="count-slider-container">
-                            <output class="slider-output-0"></output>
+                            <output class="slider-output-0">0</output>
                             <div class="count-slider" id="slider">
                             </div>
-                            <output class="slider-output-1"></output>
+                            <output class="slider-output-1">12</output>
                         </div>
                     </div>
                     <div class="year">
@@ -98,8 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-container">
-
+            <div class="card-container" id='cards'>
             </div>
         </div>
     </main>
