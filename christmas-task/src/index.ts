@@ -2,8 +2,8 @@
 import { CardDataModel } from './application/cardDataModel';
 import { ICardData } from './application/cardDataModel';
 import { searchName } from './application/search';
-import { counSlider } from './application/sliderRange';
-import { yearSlide } from './application/sliderRange';
+// import { counSlider } from './application/sliderRange';
+// import { yearSlide } from './application/sliderRange';
 import { SortSel } from './application/sort';
 
 
@@ -66,8 +66,8 @@ console.log(Array2);
 }
 
 SortSel()
-counSlider()
-yearSlide()
+// counSlider()
+// yearSlide()
 searchName()
 
 
@@ -165,4 +165,32 @@ function favoriteToys(){
 
 }
 favoriteToys()
+const startPageBtn = <HTMLElement>document.querySelector('.switch-start-page');
+const toyPage = <HTMLElement>document.querySelector('.main-toy-page');
+const treePage =<HTMLElement>document.querySelector('.main-tree-page')
+const startPage= <HTMLElement>document.querySelector('.main-start-page');
+const treeSwitchPage = <HTMLElement>document.querySelector('.switch-main-favorites-page');
+const toysSwitchPage = <HTMLElement>document.querySelector('.switch-main-page');
+const logo = <HTMLElement>document.querySelector('.logo');
 
+startPageBtn.addEventListener('click', ()=>{
+  startPage.classList.add('hide');
+  toyPage.classList.remove('hide')
+});
+
+
+treeSwitchPage.addEventListener('click', ()=>{
+  startPage.classList.add('hide');
+  toyPage.classList.add('hide');
+  treePage.classList.remove('hide')
+});
+toysSwitchPage.addEventListener('click', ()=>{
+  startPage.classList.add('hide');
+  toyPage.classList.remove('hide');
+  treePage.classList.add('hide')
+});
+logo.addEventListener('click', ()=>{
+  startPage.classList.remove('hide');
+  toyPage.classList.add('hide')
+  treePage.classList.add('hide')
+});
