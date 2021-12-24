@@ -194,3 +194,19 @@ logo.addEventListener('click', ()=>{
   toyPage.classList.add('hide')
   treePage.classList.add('hide')
 });
+
+
+const bgTree= document.querySelectorAll('.bg-container .bg');
+const targetBg = <HTMLElement>document.querySelector('.main-tree-container')
+if(bgTree){
+  bgTree.forEach((it) => {
+    it.addEventListener('click',(el)=>{
+      const target = el.target as HTMLElement &{
+        dataset: Record<string, string> 
+      }
+      const {bg} = target.dataset
+      targetBg.style.backgroundImage = `url("../assets/bg/${bg}.jpg")`
+    })
+  });
+}
+
