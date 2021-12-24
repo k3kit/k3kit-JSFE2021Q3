@@ -231,3 +231,34 @@ if(changeTree){
     
   })
 }
+
+const body = document.body;
+const snowBtn = document.querySelector('.snow-control');
+function createSnowFlake() {
+	const snow_flake = <HTMLElement>document.createElement('i');
+	snow_flake.classList.add('fas');
+	snow_flake.classList.add('fa-snowflake');
+	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
+  snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's'; // between 2 - 5 seconds
+	document.body.appendChild(snow_flake);
+	
+	setTimeout(() => {
+		snow_flake.remove();
+	}, 5000)
+}
+
+let isSnow = true;
+let time;
+snowBtn?.addEventListener('click',()=>{
+  if(isSnow){
+    isSnow= false
+    time = setInterval(createSnowFlake, 55);
+  }else{
+    clearInterval(time);
+    isSnow= true
+    console.log('vkl');
+    
+  }
+  
+  
+})

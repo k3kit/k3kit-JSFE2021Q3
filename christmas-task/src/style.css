@@ -1000,3 +1000,17 @@ output {
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
 }
+
+
+.fa-snowflake {
+	color: #fff;
+	position: absolute;
+	top: -20px;
+	animation: fall linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+	}
+}

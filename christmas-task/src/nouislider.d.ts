@@ -1,3 +1,4 @@
+
 interface CssClasses {
     target: string;
     base: string;
@@ -136,7 +137,7 @@ export interface API {
     reset: (fireSetEvent?: boolean) => void;
     options: Options;
     updateOptions: (optionsToUpdate: UpdatableOptions, fireSetEvent: boolean) => void;
-    target: HTMLElement;
+    target?: HTMLElement;
     removePips: () => void;
     removeTooltips: () => void;
     getTooltips: () => {
