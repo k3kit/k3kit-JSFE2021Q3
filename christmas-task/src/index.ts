@@ -210,3 +210,24 @@ if(bgTree){
   });
 }
 
+
+
+const changeTree = document.querySelectorAll('.tree-container .tree');
+const mainTree = <HTMLElement>document.querySelector('.main-tree-container');
+
+if(changeTree){
+  changeTree.forEach((it)=>{
+    it.addEventListener('click',(el)=>{
+      const target = el.target as HTMLElement &{
+        dataset: Record<string, string> 
+      };
+      const {tree} = target.dataset;
+      mainTree.innerHTML = `
+      <img src="assets/tree/${tree}.png" class="main-tree" usemap="#tree-map" alt="tree"> 
+      `;
+      console.log(tree);
+      
+    })
+    
+  })
+}
