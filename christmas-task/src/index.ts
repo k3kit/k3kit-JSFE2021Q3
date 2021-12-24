@@ -232,14 +232,14 @@ if(changeTree){
   })
 }
 
-const body = document.body;
+
 const snowBtn = document.querySelector('.snow-control');
 function createSnowFlake() {
 	const snow_flake = <HTMLElement>document.createElement('i');
 	snow_flake.classList.add('fas');
 	snow_flake.classList.add('fa-snowflake');
 	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
-  snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's'; // between 2 - 5 seconds
+  snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's';
 	document.body.appendChild(snow_flake);
 	
 	setTimeout(() => {
@@ -256,9 +256,24 @@ snowBtn?.addEventListener('click',()=>{
   }else{
     clearInterval(time);
     isSnow= true
-    console.log('vkl');
-    
   }
-  
-  
 })
+
+let isPlay = true;
+const audio = new Audio();
+const audioBtn = document.querySelector('.audio-control');
+
+
+function playPause(){
+  if(isPlay){
+    audio.src = ('./assets/audio/audio.mp3')
+    audio.play()
+    isPlay =false;
+  
+  }else{  
+    audio.pause();
+    isPlay =true;
+  }
+}
+
+audioBtn?.addEventListener('click', playPause)
