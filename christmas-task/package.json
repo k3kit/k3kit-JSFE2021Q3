@@ -27,6 +27,10 @@
     "webpack-remove-empty-scripts": "^0.7.1"
   },
   "dependencies": {
+    "@types/nouislider": "^15.0.0",
     "nouislider": "^15.5.0"
-  }
+  },
+  "main": "webpack.config.js",
+  "author": "",
+  "license": "ISC"
 }
