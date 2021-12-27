@@ -647,7 +647,6 @@ output {
   display: flex;
   justify-content: center;
   align-items: flex-end;  
-  background-image: url("../assets/bg/1.jpg");
   background-size: cover;
   background-position: center;
   height: calc(100vh - 140px);
@@ -1213,4 +1212,24 @@ output {
 
 .hide{
   display: none;
+}
+
+.toy-on-tree {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+#tree-picture {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.tree__picture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }

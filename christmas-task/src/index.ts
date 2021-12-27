@@ -5,22 +5,34 @@ import { searchName } from './application/search';
 // import { counSlider } from './application/sliderRange';
 // import { yearSlide } from './application/sliderRange';
 import { SortSel } from './application/sort';
+import { data } from './data';
 
 
-
+interface DataToy {
+  num: string,
+  name: string,
+  count: string,
+  year: string,
+  shape: string,
+  color: string,
+  size: string,
+  favorite: boolean,
+}
 
  export const cardContainer = <HTMLElement>document.querySelector('.card-container');
 const model = new CardDataModel();
 let arr: Array<ICardData> 
 export const Array2: Array<ICardData> =[]
-const favoriteArray: Array<ICardData> =[]
+const Array3: Array<DataToy> =[]
 export function CardV() {
   return model.build().then(result => {
     arr = result.data;
     Card(arr)
     arr.forEach((it: ICardData)=>{
-      Array2.push(it)
+     Array2.push(it)
+
     })
+   
   })
 
 
@@ -28,15 +40,18 @@ export function CardV() {
  const span = <HTMLElement>document.querySelector('.item-span');
 
 CardV() 
-span.textContent = '0' +(+1)
-console.log(Array2);
+
+
+
+const selected: string[] = [];
+
 
  export function Card(arr: ICardData[]) {
   let html = '';
     cardContainer.innerHTML = '';
    arr.map((item: ICardData) => {
       html += `
-             <div class="card">
+             <div class="card" data-num="${item.num}">
              <h2 class="card-title">${item.name}</h2>
              <img class="card-img" src="assets/toys/${item.num}.webp" alt="toy">
                <div class="card-description">      
@@ -50,30 +65,56 @@ console.log(Array2);
             <div class="ribbon"></div>
             </div>`
       cardContainer.innerHTML = html;
-      const AllCards = Array.from(document.querySelectorAll('.card'));
+     const allToys = document.querySelectorAll('.card');
+     allToys.forEach((it)=>{
+      it?.addEventListener('click',(el)=>{
+        // it.classList.toggle('active');
+        const target = el.target as HTMLElement &{
+          dataset: Record<string, string> 
+        };
+            
+            const { num } = target.dataset;
 
-      function cardfunc(){
-        AllCards.forEach((it) =>{
-          it.addEventListener('click',()=>{
+            // selected.push(num);
             
-            it.classList.toggle('active')
-            
-          })
-        })
-      } 
-      cardfunc()
+          
+            if (num) {
+              if (selected.includes(num)) {
+                selected.splice(selected.indexOf(num),1);
+                it.classList?.remove('active');
+              } else if (selected.length <= 19) {
+                selected.push(num);
+                it.classList?.add('active');
+              } else if (selected.length >= 20) {
+                const popup = <HTMLElement>document.getElementById("popup");
+                const closeBtn = <HTMLElement>document.getElementById("closeBtn");
+
+                closeBtn.addEventListener('click', ()=>{
+                  popup.style.display = 'none';
+              });
+              popup.addEventListener('click', ()=>{
+                  popup.style.display = 'none';
+              });
+           
+              }
+            }
+            span.textContent = String(selected.length)
+         })
+     })
+    
+      
     });
 }
+
+
 
 SortSel()
 // counSlider()
 // yearSlide()
 searchName()
 
-
-
 const form = document.querySelectorAll('.shape');
-const keys: string[]= ['shape','color','size'];
+// const keys: string[]= ['shape','color','size'];
 function filter(){
   form.forEach((it) =>{
     
@@ -88,7 +129,6 @@ function filter(){
       if(!it.classList.contains('active')){
         Card(Array2)
       }
-      console.log(sorted);
       
     
     })
@@ -113,7 +153,7 @@ function filterColor(){
       if(!it.classList.contains('active')){
         Card(Array2)
       }
-      console.log(sorted);
+
       
     
     })
@@ -130,7 +170,7 @@ function filterSize(){
     it.addEventListener('click',()=>{
       it.classList.toggle('active')
       const shape = it['dataset']['filter'];
-      console.log(shape);
+   
       
       cardContainer.innerHTML = '';
       const sorted = arr.filter(function(it){
@@ -140,8 +180,7 @@ function filterSize(){
       if(!it.classList.contains('active')){
         Card(Array2)
       }
-      console.log(sorted);
-      
+   
     
     })
   
@@ -205,10 +244,32 @@ if(bgTree){
         dataset: Record<string, string> 
       }
       const {bg} = target.dataset
-      targetBg.style.backgroundImage = `url("../assets/bg/${bg}.jpg")`
+      currentTreeSection.bgImage = bg;
+      renderTreeSection();
+      // targetBg.style.backgroundImage = `url("../assets/bg/${bg}.jpg")`
     })
   });
 }
+interface ToyPosition {
+  numberToy: string,
+  position: [number, number]
+}
+interface TreeSection {
+  bgImage: string,
+  tree: string,
+  toys: ToyPosition[];
+}
+
+  const currentTreeSection: TreeSection = {
+    bgImage: '5',
+    tree: '5',
+    toys: [
+      //   {
+      //   numberToy: '5',
+      //   position: [200, 200]
+      // }
+    ],
+  };
 
 
 
@@ -222,10 +283,8 @@ if(changeTree){
         dataset: Record<string, string> 
       };
       const {tree} = target.dataset;
-      mainTree.innerHTML = `
-      <img src="assets/tree/${tree}.png" class="main-tree" usemap="#tree-map" alt="tree"> 
-      `;
-      console.log(tree);
+      currentTreeSection.tree = tree
+      renderTreeSection();
       
     })
     
@@ -241,7 +300,6 @@ if(colorBtn){
         dataset: Record<string, string> 
       }
       const {color} = target.dataset;
-      console.log(color);
       lightropeLight.forEach((it)=>{
         it.className = `light ${color}`
         })
@@ -301,6 +359,120 @@ onoffLightrope?.addEventListener('click', ()=>{
   lightrope?.classList.toggle('hide')
 })
 
-function toogle(toogle: any) {
-  throw new Error('Function not implemented.');
+
+
+function renderToys() {
+  const treeToys = document.querySelector('.favorites-container');
+  
+  if(treeToys) treeToys.innerHTML = '';
+  if(selected.length>0){
+    selected.forEach((it)=>{
+     
+      if(treeToys) treeToys.innerHTML +=`
+      <div class="favorites-card">
+      <img src="../assets/toys/${it}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${it}">
+      <p class="favorites-count">${data[+it - 1].count}</p>
+      </div>
+      `
+    })
+  }else{
+    
+      for (let i = 0; i < 20; i++) {
+  
+        if (treeToys) treeToys.innerHTML += `
+      <div class="favorites-card">
+          <img src="../assets/toys/${i + 1}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${i + 1}">
+          <p class="favorites-count">${data[i].count}</p>
+      </div>
+      `;
+     
+      
+    }
+   
+  }
 }
+renderToys()
+dragAndDrop()
+function dragAndDrop(): void{
+  const toys = document.querySelectorAll('.favorites-card img')
+
+  if (toys) {
+    toys.forEach((el) => {
+      el.addEventListener('dragstart', (el2) => {
+        const item = el2 as DragEvent;
+        const target = el2.target as EventTarget & { dataset: Record<string, string> };
+        const { num } = target.dataset;
+        if (item.dataTransfer) item.dataTransfer.setData('id', num);
+        if (item.dataTransfer) item.dataTransfer.setData('out', 'true');
+        if (item.dataTransfer) item.dataTransfer.setData('offsetX', String(item.offsetX));
+        if (item.dataTransfer) item.dataTransfer.setData('offsetY', String(item.offsetY));
+      });
+    })
+  }
+}
+
+
+
+
+
+renderTreeSection();
+  function renderTreeSection(){
+    const treeContainer = document.querySelector('.tree__picture') as HTMLElement & { style: CSSStyleDeclaration };
+    treeContainer.style.backgroundImage = `url("../assets/bg/${currentTreeSection.bgImage}.jpg")`;
+    if (treeContainer) treeContainer.innerHTML = `
+      <img id="tree-picture" src="../assets/tree/${currentTreeSection.tree}.png" alt="Tree">
+      <div class="tree__toys-a"></div>
+      `;
+      if (currentTreeSection.toys.length > 0) {
+        const toyOn = document.querySelector('.tree__toys-a');
+        if (toyOn) toyOn.innerHTML = '';
+        currentTreeSection.toys.forEach((el, i) => {
+          toyOn!.innerHTML += `
+            <img class="toy-tree" src="./assets/toys/${el.numberToy}.webp" data-num="${el.numberToy}" data-numi="${i}" alt="pict" draggable="true" style="top: ${el.position[1]}px; left: ${el.position[0]}px;">
+            `;
+        });
+      }
+      const tree = document.querySelector('#tree-picture');
+  
+      if (tree) tree.addEventListener('dragover', (ev) => {
+        ev.preventDefault()
+      })
+      if (tree) tree.addEventListener('drop', (el) => {
+        const target = el as DragEvent & { layerX: string, layerY: string };
+        const outToy = target.dataTransfer?.getData('out');
+        if (outToy == 'true') {
+          currentTreeSection.toys.push({
+            numberToy: `${target.dataTransfer?.getData('id')}`,
+            position: [+`${target.layerX}` -  +target.dataTransfer!.getData('offsetX'), +`${target.layerY}` - +target.dataTransfer!.getData('offsetY')]
+          });
+        } else if (outToy == 'false') {
+
+          currentTreeSection.toys[ +target.dataTransfer!.getData('id')].position = [+`${target.layerX}` - +target.dataTransfer!.getData('offsetX'), +`${target.layerY}` - +target.dataTransfer!.getData('offsetY')];
+        }
+        renderTreeSection();
+      });
+      dragToy()
+      function dragToy(): void {
+        const toys = document.querySelectorAll('.toy-tree');
+        if (toys) {
+          toys.forEach((el) => {
+            el.addEventListener('dragstart', (el2) => {
+              const item = el2 as DragEvent;
+              const target = el2.target as EventTarget & { dataset: Record<string, string> };
+              const { numi } = target.dataset;
+              if (item.dataTransfer) item.dataTransfer.setData('id', numi);
+              if (item.dataTransfer) item.dataTransfer.setData('out', 'false');
+              if (item.dataTransfer) item.dataTransfer.setData('offsetX', String(item.offsetX));
+              if (item.dataTransfer) item.dataTransfer.setData('offsetY', String(item.offsetY));
+              el.addEventListener('dragend', (el3) => {
+                const target = el3 as DragEvent;
+                // if (target.dataTransfer?.dropEffect == 'none') {
+                //   currentTreeSection.toys.splice(+numi, 1);
+                //   renderTreeSection();
+                // }
+              })
+            });
+          })
+        }
+      }
+  }
