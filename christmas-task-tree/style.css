@@ -559,25 +559,25 @@ output {
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 600px;
-    height: 250px;
+    width: 550px;
+    height: 230px;
     margin-bottom: 80px;
     margin-top: 220px;
     color: #fff;
     font-weight: 400;
     text-align: center;
-    border: 3px solid #00434e;
+    border: 3px solid #1c98ac;
     border-radius: 25px;
-    background-color: rgba(31, 112, 127, .3);
-    backdrop-filter: blur(6px);
+    background-color: rgba(45, 145, 163, 0.3);
+    backdrop-filter: blur(8px);
     font-size: 48px;
 }
 
 .switch-start-page{
     position: relative;
-    width: 320px;
-    height: 60px;
-    border: 3px solid #278D9F;
+    width: 350px;
+    height: 75px;
+    border: 5px solid #278D9F;
     border-radius: 30px;
     background-color: rgba(8, 120, 139, 0.664);
     backdrop-filter: blur(6px);
@@ -587,13 +587,9 @@ output {
     cursor: pointer;
     transition: .3s;
     overflow: hidden;
-    outline: 1px solid;
-    outline-color: rgba(255, 255, 255, 0.5);
-    outline-offset: 0px;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .switch-start-page:hover {
-  outline-color: rgba(231, 61, 61, 0);
+  outline-color: rgba(199, 98, 98, 0);
   outline-offset: 15px;
 }
 .main-wrapper{
@@ -833,34 +829,34 @@ output {
 }
 
 .bg:nth-child(1) {
-  background-image: url("../assets/bg/1.jpg");
+  background-image: url("./assets/bg/1.jpg");
 }
 .bg:nth-child(2) {
-  background-image: url("../assets/bg/2.jpg");
+  background-image: url("./assets/bg/2.jpg");
 }
 .bg:nth-child(3) {
-  background-image: url("../assets/bg/3.jpg");
+  background-image: url("./assets/bg/3.jpg");
 }
 .bg:nth-child(4) {
-  background-image: url("../assets/bg/4.jpg");
+  background-image: url("./assets/bg/4.jpg");
 }
 .bg:nth-child(5) {
-  background-image: url("../assets/bg/5.jpg");
+  background-image: url("./assets/bg/5.jpg");
 }
 .bg:nth-child(6) {
-  background-image: url("../assets/bg/6.jpg");
+  background-image: url("./assets/bg/6.jpg");
 }
 .bg:nth-child(7) {
-  background-image: url("../assets/bg/7.jpg");
+  background-image: url("./assets/bg/7.jpg");
 }
 .bg:nth-child(8) {
-  background-image: url("../assets/bg/8.jpg");
+  background-image: url("./assets/bg/8.jpg");
 }
 .bg:nth-child(9) {
-  background-image: url("../assets/bg/9.jpg");
+  background-image: url("./assets/bg/9.jpg");
 }
 .bg:nth-child(10) {
-  background-image: url("../assets/bg/10.jpg");
+  background-image: url("./assets/bg/10.jpg");
 }
 
 .tree {
@@ -872,22 +868,22 @@ output {
 }
 
 .tree:nth-child(1) {
-  background-image: url("../assets/tree/1.png");
+  background-image: url("./assets/tree/1.png");
 }
 .tree:nth-child(2) {
-  background-image: url("../assets/tree/2.png");
+  background-image: url("./assets/tree/2.png");
 }
 .tree:nth-child(3) {
-  background-image: url("../assets/tree/3.png");
+  background-image: url("./assets/tree/3.png");
 }
 .tree:nth-child(4) {
-  background-image: url("../assets/tree/4.png");
+  background-image: url("./assets/tree/4.png");
 }
 .tree:nth-child(5) {
-  background-image: url("../assets/tree/5.png");
+  background-image: url("./assets/tree/5.png");
 }
 .tree:nth-child(6) {
-  background-image: url("../assets/tree/6.png");
+  background-image: url("./assets/tree/6.png");
 }
 
 .garland-container {
@@ -1214,7 +1210,7 @@ output {
   display: none;
 }
 
-.toy-on-tree {
+.toy-tree {
   position: absolute;
   width: 72px;
   height: 72px;
