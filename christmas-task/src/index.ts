@@ -231,7 +231,23 @@ if(changeTree){
     
   })
 }
+const colorBtn = document.querySelectorAll('.garland-btns .color-btn');
+const lightropeLight = document.querySelectorAll('.light');
 
+if(colorBtn){
+  colorBtn.forEach((it)=>{
+    it.addEventListener('click',(el)=>{
+      const target = el.target as HTMLElement &{
+        dataset: Record<string, string> 
+      }
+      const {color} = target.dataset;
+      console.log(color);
+      lightropeLight.forEach((it)=>{
+        it.className = `light ${color}`
+        })
+    })
+  })
+}
 
 const snowBtn = document.querySelector('.snow-control');
 function createSnowFlake() {
@@ -277,3 +293,14 @@ function playPause(){
 }
 
 audioBtn?.addEventListener('click', playPause)
+
+
+const lightrope = document.querySelector('.garland-tree-container');
+const onoffLightrope = document.querySelector('.onoffswitch-label');
+onoffLightrope?.addEventListener('click', ()=>{
+  lightrope?.classList.toggle('hide')
+})
+
+function toogle(toogle: any) {
+  throw new Error('Function not implemented.');
+}
