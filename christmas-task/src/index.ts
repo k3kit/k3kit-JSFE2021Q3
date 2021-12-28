@@ -370,7 +370,7 @@ function renderToys() {
      
       if(treeToys) treeToys.innerHTML +=`
       <div class="favorites-card">
-      <img src="../assets/toys/${it}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${it}">
+      <img src="./assets/toys/${it}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${it}">
       <p class="favorites-count">${data[+it - 1].count}</p>
       </div>
       `
@@ -381,7 +381,7 @@ function renderToys() {
   
         if (treeToys) treeToys.innerHTML += `
       <div class="favorites-card">
-          <img src="../assets/toys/${i + 1}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${i + 1}">
+          <img src="./assets/toys/${i + 1}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${i + 1}">
           <p class="favorites-count">${data[i].count}</p>
       </div>
       `;
@@ -418,14 +418,14 @@ function dragAndDrop(): void{
 renderTreeSection();
   function renderTreeSection(){
     const treeContainer = document.querySelector('.main-tree-container') as HTMLElement & { style: CSSStyleDeclaration };
-    treeContainer.style.backgroundImage = `url("../assets/bg/${currentTreeSection.bgImage}.jpg")`;
+    treeContainer.style.backgroundImage = `url("./assets/bg/${currentTreeSection.bgImage}.jpg")`;
     if (treeContainer) treeContainer.innerHTML = `
     <map name="tree-map">
             <area
               coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664"
               shape="poly">
           </map>
-      <img id="tree-picture"  usemap="#tree-map" src="../assets/tree/${currentTreeSection.tree}.png" alt="Tree">
+      <img id="tree-picture"  usemap="#tree-map" src="./assets/tree/${currentTreeSection.tree}.png" alt="Tree">
       <div class="tree__toys-a"></div>
       `;
       if (currentTreeSection.toys.length > 0) {
