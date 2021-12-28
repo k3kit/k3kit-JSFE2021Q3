@@ -642,6 +642,7 @@ output {
 .main-tree-container {
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: flex-end;  
   background-size: cover;
   background-position: center;
@@ -650,7 +651,7 @@ output {
   width: 800px;
   padding-bottom: 20px;
   overflow: hidden;
-  position: relative;
+  
 }
 
 .main-tree {
