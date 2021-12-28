@@ -84,6 +84,8 @@ const selected: string[] = [];
                 it.classList?.remove('active');
               } else if (selected.length <= 19) {
                 selected.push(num);
+                renderToys()
+                console.log(selected);
                 it.classList?.add('active');
               } else if (selected.length >= 20) {
                 const popup = <HTMLElement>document.getElementById("popup");
@@ -360,32 +362,29 @@ onoffLightrope?.addEventListener('click', ()=>{
 })
 
 
-
-function renderToys() {
+renderToys()
+function renderToys():void {
   const treeToys = document.querySelector('.favorites-container');
   
   if(treeToys) treeToys.innerHTML = '';
-  if(selected.length>0){
-    selected.forEach((it)=>{
-     
-      if(treeToys) treeToys.innerHTML +=`
-      <div class="favorites-card">
-      <img src="./assets/toys/${it}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${it}">
-      <p class="favorites-count">${data[+it - 1].count}</p>
+  if (selected.length > 0) {
+    selected.forEach((el) => {
+      if (treeToys) treeToys.innerHTML += 
+   `<div class="favorites-card">
+          <img src="./assets/toys/${el}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${el}">
+          <p class="favorites-count">${data[+el - 1].count}</p>
       </div>
-      `
-    })
+      `;
+    });
   }else{
-    
       for (let i = 0; i < 20; i++) {
-  
         if (treeToys) treeToys.innerHTML += `
       <div class="favorites-card">
           <img src="./assets/toys/${i + 1}.webp" class="favorites-card-img" alt="pict" draggable="true" data-num="${i + 1}">
           <p class="favorites-count">${data[i].count}</p>
       </div>
       `;
-     
+      console.log(selected);
       
     }
    
@@ -394,7 +393,8 @@ function renderToys() {
 renderToys()
 dragAndDrop()
 function dragAndDrop(): void{
-  const toys = document.querySelectorAll('.favorites-card img')
+  const toys = document.querySelectorAll('.favorites-card-img')
+
 
   if (toys) {
     toys.forEach((el) => {
@@ -462,6 +462,7 @@ renderTreeSection();
         if (toys) {
           toys.forEach((el) => {
             el.addEventListener('dragstart', (el2) => {
+              console.log(selected);
               const item = el2 as DragEvent;
               const target = el2.target as EventTarget & { dataset: Record<string, string> };
               const { numi } = target.dataset;
