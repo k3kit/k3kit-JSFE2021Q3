@@ -417,10 +417,15 @@ function dragAndDrop(): void{
 
 renderTreeSection();
   function renderTreeSection(){
-    const treeContainer = document.querySelector('.tree__picture') as HTMLElement & { style: CSSStyleDeclaration };
+    const treeContainer = document.querySelector('.main-tree-container') as HTMLElement & { style: CSSStyleDeclaration };
     treeContainer.style.backgroundImage = `url("../assets/bg/${currentTreeSection.bgImage}.jpg")`;
     if (treeContainer) treeContainer.innerHTML = `
-      <img id="tree-picture" src="../assets/tree/${currentTreeSection.tree}.png" alt="Tree">
+    <map name="tree-map">
+            <area
+              coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664"
+              shape="poly">
+          </map>
+      <img id="tree-picture"  usemap="#tree-map" src="../assets/tree/${currentTreeSection.tree}.png" alt="Tree">
       <div class="tree__toys-a"></div>
       `;
       if (currentTreeSection.toys.length > 0) {
@@ -432,7 +437,7 @@ renderTreeSection();
             `;
         });
       }
-      const tree = document.querySelector('#tree-picture');
+      const tree = document.querySelector('area');
   
       if (tree) tree.addEventListener('dragover', (ev) => {
         ev.preventDefault()
