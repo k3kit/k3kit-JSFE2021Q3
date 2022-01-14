@@ -2,6 +2,7 @@
 import { CardDataModel } from './application/cardDataModel';
 import { ICardData } from './application/cardDataModel';
 import { searchName } from './application/search';
+import { counSlider, yearSlide } from './application/sliderRange';
 // import { counSlider } from './application/sliderRange';
 // import { yearSlide } from './application/sliderRange';
 import { SortSel } from './application/sort';
@@ -111,8 +112,8 @@ const selected: string[] = [];
 
 
 SortSel()
-// counSlider()
-// yearSlide()
+counSlider()
+yearSlide()
 searchName()
 
 const form = document.querySelectorAll('.shape');
