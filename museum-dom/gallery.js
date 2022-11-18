@@ -20,6 +20,7 @@ const pictureInnerContainer = document.querySelector(
     const img = document.createElement("img");
     img.src = `assets/img/galery/webp/galery${number}.webp`;
     img.classList.add("picture-container__picture");
+   
     img.alt = `galery${number}`;
     img.loading = "lazy";
     picture.append(img);
