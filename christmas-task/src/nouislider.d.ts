@@ -35,67 +35,67 @@ interface CssClasses {
     valueNormal: string;
     valueLarge: string;
     valueSub: string;
-}
-export interface PartialFormatter {
+  }
+  export interface PartialFormatter {
     to: (value: number) => string | number;
     from?: (value: string) => number | false;
-}
-export interface Formatter extends PartialFormatter {
+  }
+  export interface Formatter extends PartialFormatter {
     from: (value: string) => number | false;
-}
-export declare enum PipsMode {
+  }
+  export declare enum PipsMode {
     Range = "range",
     Steps = "steps",
     Positions = "positions",
     Count = "count",
     Values = "values"
-}
-export declare enum PipsType {
+  }
+  export declare enum PipsType {
     None = -1,
     NoValue = 0,
     LargeValue = 1,
     SmallValue = 2
-}
-declare type WrappedSubRange = [number] | [number, number];
-declare type SubRange = number | WrappedSubRange;
-interface Range {
+  }
+  declare type WrappedSubRange = [number] | [number, number];
+  declare type SubRange = number | WrappedSubRange;
+  interface Range {
     min: SubRange;
     max: SubRange;
     [key: string]: SubRange;
-}
-interface BasePips {
+  }
+  interface BasePips {
     mode: PipsMode;
     density?: number;
     filter?: PipsFilter;
     format?: PartialFormatter;
-}
-interface PositionsPips extends BasePips {
+  }
+  interface PositionsPips extends BasePips {
     mode: PipsMode.Positions;
     values: number[];
     stepped?: boolean;
-}
-interface ValuesPips extends BasePips {
+  }
+  interface ValuesPips extends BasePips {
     mode: PipsMode.Values;
     values: number[];
     stepped?: boolean;
-}
-interface CountPips extends BasePips {
+  }
+  interface CountPips extends BasePips {
     mode: PipsMode.Count;
     values: number;
     stepped?: boolean;
-}
-interface StepsPips extends BasePips {
+  }
+  interface StepsPips extends BasePips {
     mode: PipsMode.Steps;
-}
-interface RangePips extends BasePips {
+  }
+  interface RangePips extends BasePips {
     mode: PipsMode.Range;
-}
-declare type Pips = PositionsPips | ValuesPips | CountPips | StepsPips | RangePips;
-declare type StartValues = string | number | (string | number)[];
-declare type HandleAttributes = {
+  }
+  declare type Pips = PositionsPips | ValuesPips | CountPips | StepsPips | RangePips;
+  declare type StartValues = string | number | (string | number)[];
+  declare type HandleAttributes = {
     [key: string]: string;
-};
-interface UpdatableOptions {
+  };
+  interface UpdatableOptions {
     range?: Range;
     start?: StartValues;
     margin?: number;
@@ -107,8 +107,8 @@ interface UpdatableOptions {
     format?: Formatter;
     tooltips?: boolean | PartialFormatter | (boolean | PartialFormatter)[];
     animate?: boolean;
-}
-export interface Options extends UpdatableOptions {
+  }
+  export interface Options extends UpdatableOptions {
     range: Range;
     connect?: "lower" | "upper" | boolean | boolean[];
     orientation?: "vertical" | "horizontal";
@@ -124,8 +124,8 @@ export interface Options extends UpdatableOptions {
     ariaFormat?: PartialFormatter;
     animationDuration?: number;
     handleAttributes?: HandleAttributes[];
-}
-export interface API {
+  }
+  export interface API {
     destroy: () => void;
     steps: () => NextStepsForHandle[];
     on: (eventName: string, callback: EventCallback) => void;
@@ -146,25 +146,25 @@ export interface API {
         [handleNumber: number]: HTMLElement;
     };
     pips: (grid: Pips) => HTMLElement;
-}
-interface TargetElement extends HTMLElement {
+  }
+  interface TargetElement extends HTMLElement {
     noUiSlider?: API;
-}
-interface NearByStep {
+  }
+  interface NearByStep {
     startValue: number;
     step: number | false;
     highestStep: number;
-}
-interface NearBySteps {
+  }
+  interface NearBySteps {
     stepBefore: NearByStep;
     thisStep: NearByStep;
     stepAfter: NearByStep;
-}
-declare type GetResult = number | string | (string | number)[];
-declare type NextStepsForHandle = [number | false | null, number | false | null];
-declare type PipsFilter = (value: number, type: PipsType) => PipsType;
-declare type EventCallback = (this: API, values: (number | string)[], handleNumber: number, unencoded: number[], tap: boolean, locations: number[], slider: API) => void;
-declare class Spectrum {
+  }
+  declare type GetResult = number | string | (string | number)[];
+  declare type NextStepsForHandle = [number | false | null, number | false | null];
+  declare type PipsFilter = (value: number, type: PipsType) => PipsType;
+  declare type EventCallback = (this: API, values: (number | string)[], handleNumber: number, unencoded: number[], tap: boolean, locations: number[], slider: API) => void;
+  declare class Spectrum {
     xPct: number[];
     xVal: number[];
     xSteps: (number | false)[];
@@ -184,15 +184,15 @@ declare class Spectrum {
     convert(value: number): number;
     private handleEntryPoint;
     private handleStepPoint;
-}
-declare const cssClasses: CssClasses;
-declare function initialize(target: TargetElement, originalOptions: Options): API;
-export { TargetElement as target };
-export { initialize as create };
-export { cssClasses };
-declare const _default: {
+  }
+  declare const cssClasses: CssClasses;
+  declare function initialize(target: TargetElement, originalOptions: Options): API;
+  export { TargetElement as target };
+  export { initialize as create };
+  export { cssClasses };
+  declare const _default: {
     __spectrum: typeof Spectrum;
     cssClasses: CssClasses;
     create: typeof initialize;
-};
-export default _default;
+  };
+  export default _default;

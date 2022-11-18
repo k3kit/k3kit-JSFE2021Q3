@@ -10,7 +10,7 @@
   favorite: boolean
   picture?:string
 }
-interface ICardDto{
+ export interface ICardDto{
   num: string,
   name: string,
   count: string,
